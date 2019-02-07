@@ -53,6 +53,6 @@ Further, the machine learning models used in this project and their well-documen
 
 # Publications
 
-"Automatic Inference of 'hidden' Security Fixes in Source Code Repositories Daniel Gareev & Stanislav Dashevskiy, University of Luxembourg [Paper](https://github.com/lowlypalace/opensec/raw/master/Automatic%20Inference%20of%20'hidden'%20Security%20Fixes%20in%20Source%20Code%20Repositories.pdf)
+"Automatic Inference of 'hidden' Security Fixes in Source Code Repositories Daniel Gareev & Stanislav Dashevskiy, University of Luxembourg: [Paper](https://github.com/lowlypalace/opensec/raw/master/Automatic%20Inference%20of%20'hidden'%20Security%20Fixes%20in%20Source%20Code%20Repositories.pdf)
 
 
