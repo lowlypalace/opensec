@@ -1,4 +1,4 @@
-# Automatic Inference of 'hidden' Security Fixes in Source Code Repositories
+# Opensec Mining and Classification Tool. Automatic Inference of 'hidden' Security Fixes in Source Code Repositories
 
 The main objective of the software is to automate the search and identification of  commits that introduce fixes to security bugs in open source repositories, that often do not go through public disclosure.
 
@@ -50,3 +50,9 @@ The scripts used in the project are both available as individual `.py` files as 
 Security fixes can be quite difficult to distinguish based only on the commit message or source code changes statistics. That means that the process of data collection cannot be automated and some manual review such as validation, preprocessing and outliers-detection is needed. The examples of final datasets can be found in `Datasets` directory.
 
 Further, the machine learning models used in this project and their well-documented code can be found in IPython notebook document `ML\Classifier.ipynb`
+
+# Publications
+
+"Automatic Inference of 'hidden' Security Fixes in Source Code Repositories Daniel Gareev & Stanislav Dashevskiy, University of Luxembourg [Paper](https://github.com/lowlypalace/opensec/raw/master/Automatic%20Inference%20of%20'hidden'%20Security%20Fixes%20in%20Source%20Code%20Repositories.pdf)
+
+
