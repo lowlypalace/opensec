@@ -1,0 +1,908 @@
+outcome_class,project_name,hash,commit_message
+1,ant,7bc745a289cf68cb2eba647bbfba9e9ec06eb771,post-process generated javadocs as workaround for CVE-2013-1571 - based on Maven patch by Uwe Schindler - PR 55132
+1,ant,08284bc7aa7d066544b30974231240c9b73597eb,[CVE-2012-2098] merge bzip2 edge case improvement from Commons Compress
+1,ambari-logsearch,1811d0bad0b5e3691036c027cef24e289640e704,AMBARI-24431. Infra Manager / Log Search: Fix Jetty CVE-2018-12536. (#2002)
+1,ambari-logsearch,37db2229747c0e58e95e14a787895af7308f90a2,AMBARI-24422. Log Feeder: upgrade guava version (because of CVE-2018-10237) (#1992)
+1,mod_perl,82b8d8bfe88a8878e1efb793c69548e1eb9eed55,"Fix t/perl/hash_attack.t to work with Perl 5.14.4, 5.16.3 etc, which contain a fix for CVE-2013-1667 (memory exhaustion with arbitrary hash keys). This resolves rt.perl.org #116863, from where the patch by Hugo van der Sanden was taken (with a minor edit in a comment by the committer). Tested by the committer on Windows 7 x64 with VC++ 2010 using Perls 5.14.3, 5.14.4, 5.16.2 and 5.16.3-RC1, all against Apache 2.2.22."
+1,maven,2b336ff150b12aeae9bd0d2a61f1e8d02504492f,[MNG-6312] Update Maven Wagon dependency  o Upgrade wagon version to 3.0.0 based on CVE-2015-6748    in shaded jsoup.
+1,mirrormanager2,776cc7bf708268e542ebfd1c897d704a53126a82,Merge pull request #173 from fedora-infra/CVE-2016-1000003
+1,apex-core,805aba30b5b84e39cf6dda8c6d5a805a3c880c60,APEXCORE-815 Whitelist CVE-2016-6811
+1,ofbiz,c6f6801737c06ea19b648fdda2d7b03d4a78a3be,Updates Shiro to 1.2.5 (CVE-2016-4437) - https://issues.apache.org/jira/browse/OFBIZ-7373
+1,ofbiz,dfce427e08676d9a18960b848bf9f20d908fb92e,"Updates OWASP dependency check files. Several changes, notably: * removes all Tomcat libs suppresses (in catalina\lib) and rather adds a sole suppress based on CVEs (current Tomcat version not concerned) * same for jsp-api-2.3 * a new vulnerability is identified: CVE-2015-1776 for hadoop libs (in solr component)"
+1,ofbiz,cf0ecf43703fc5f598dd07d04f11289d91d803eb,In framework/base/lib/ updates Xalan from 2.7.1 to 2.7.2 because of CVE-2014-0107 (was fixed at XALANJ-2435) - https://issues.apache.org/jira/browse/OFBIZ-6905 This implies to update also Xerces from 2.9.1 to 2.11.0 and also xml-apis from 2.9.1 to 1.4.01 (2.9.1 was a wrong version number. It was actually part of the Xerces 2.9.1 package but I was unable to find the real version number then at https://xerces.apache.org/xerces2-j/releases.html)
+1,ofbiz,b4c27b012cbaa4e88249b627269f3a03b9ad4db9,OFBIZ-6568: upgraded Groovy to the latest version (2.4.5). [CVE-2016-2170] The infamous Java serialization vulnerability
+1,ofbiz,55aaa6934e455ba13a800921d491992c1292d0dd,Updates commons-collections lib from 3.2.1 to 3.2.2 [CVE-2016-2170] The infamous Java serialization vulnerability
+1,ofbiz,c3cc66f1da0d54f918179c342280219024f64bc2,The description attribute of the display-entity element is now escaped to prevent the risk of an XSS attack. [CVE-2015-3268] Stored Cross-Site Scripting Vulnerability affecting the description attribute of the display-entity element because it was not escaped.
+1,ofbiz,0187743b1ef3c847a2d6b8687070c909316936a6,Removed support for runtime nested expressions in FlexibleStringExpander.java. This fixes the vulnerability CVE-2013-2250
+1,ofbiz,6501116835ea7429c54dc0723cb3d380612a2eae,"The content rendered in the Webtools view log"" screen is now rendered from the ofbiz.log file rather then the ofbiz.html file in order to provide more control on the html code rendered in the screen. This fixes the vulnerability CVE-2013-2137"""
+1,ofbiz,ec9b4d668aa2211379588e33190936597ae562d0,CVE-2013-0177: The Image.alt is now escaped to prevent the risk of an XSS attack.
+1,ofbiz,5caeb525634157e10bde176f33afc60bbe3e9ef0,"CVE-2012-3506: Unlike descriptions and values, tooltips were not encoded, thanks to Scott for spotting it (r1377382 was flawed)"
+1,ofbiz,47f63d8126ba5c6bd1461d45d8c10b59f30d8f2d,"Upgraded Ant from 1.8.3 to 1.8.4 and Commons Compress"" from 1.4 to 1.4.1 in order to protect the system from vulnerability reported in CVE-2012-2098: Apache Commons Compress and Apache Ant denial of service vulnerability."""
+1,ofbiz,0c326065819cf11e5f493e6c54656a32d21c6ad4,CVE-2012-1621: Prevent user submitted data from being streamed directly back to the browser when the content map-key is not found.  Log a warning instead.
+1,ofbiz,e3035e2a93ea80a24c1653591dba72a03efc9f56,CVE-2012-1622: Disable support for nested scripts in FlexibleStringExpander.
+1,ofbiz,08f833532f9abfd7e7f75b4b7ca096702ac97046,CVE-2012-1621: Ensure that collections (except for maps) are properly encoded for html when rendered using toString() e.g.
+1,ofbiz,192668ae5439349feebcbb9c4382846ef7a9805b,CVE-2012-1621: Escape errors returned from ajax calls in the checkout pages
+1,ofbiz,86c70f4c06a774b78abe33fc0f8a3b8ab092eee7,CVE-2012-1621: Removed the Webslinger component and all the framework dependencies on it; the reasons for this * no active committer was maintaining the webslinger component * the component was experimental and not really used by OFBiz * the component was really big (lot of jars etc...) and we are trying to slim down the OFBiz framework and keep only the essential/useful features * this fixes a security issue reported to the OFBiz PMC
+1,ofbiz,5aa135f01ddcaa227c3db72bb08715bbb2ca19d2,[CVE-2010-0432] Multiple fixes to the macro and html form widget renderers to ensure that all output is encoded when necessary.
+1,ofbiz,eef44e37a15f5850171c3aae15b1777ce8de847d,"[CVE-2010-0432] Properly encode any error messages before attempting to write them to the response.  I'm doing it here to avoid having to do the encoding within each app's error.jsp file, I think this should be fine though."
+1,ofbiz,34125e42d1db74064482c296c871e11c92dc4527,"[CVE-2010-0432] Added an OFBiz specific FreeMarker TemplateExceptionHandler, ensures that any stack trace error messages are properly encoded before being dumped to the browser (or anywhere else)."
+1,ofbiz,50983b72a329851f88a013630b718efbd4c291bf,[CVE-2010-0432] Menu widget links of type hidden-form were not correctly encoding the value attribute.
+1,karaf-site,5695d37fa02a481d63a5b2df966a9fe612c93f31,Publish CVE-2018-11787 advisory
+1,karaf-site,4532bbb785c163e38c9c09683067411f0b3da031,Announce CVE-2018-11786 advisory
+1,nifi-site,fa195c457c5c348bc81c5b8fe29fbcd69cbb7356,"Added 1.6.0 CVEs to security.html (CVE-2018-1309, CVE-2018-1310, CVE-2017-8028, CVE-2018-1324)."
+1,nifi-site,c029cc5844e72b0cf435312fb96f91ad4833b89e,Added CVE-2017-15703 to security.hbs.
+1,nifi-site,90b79ac8b4c9c2433be726a7c4a6b6d52c6e49f1,Added CVE-2017-12632 and CVE-2017-15697 to security.hbs.
+1,nifi-site,b29f99080449883c9d040f0b1d149d17d74ec43c,Added CVE-2017-12623 and release dates and link anchors to security page.
+1,nifi-site,cf05c9e81a85d1b4f85acf80253fbc9455c413d6,Updated security page with CVE-2017-5635 and CVE-2017-5636.
+1,nifi-site,2c707bffa501a8c8beae14505038aeedf5c5bfa1,Added information for security/security page and CVE-2016-8748
+1,james-project,34d11a2b7021331c43c11e7be8f7672052dc2736,JAMES-2198 CVE-2017-12628 Upgrade commons collection to version 3.2.2
+1,maven-plugins,129789421562cad2354a77368cd17f366504085f,Use proper version of m-javadoc-p (CVE-2013-1571) and m-project-info-reports-p (M3.1+)
+1,maven-plugins,d63cf27219caa20f074526c33056e510bf31a8f0,Set m-site-p to 3.3 so it can be built with M3.1 Set m-javadoc-p due to CVE-2013-1571
+1,maven-plugins,56d7bb27fc31c70eb8b53be8c35a2fa273502c35,"[MJAVADOC-370] Javadoc vulnerability (CVE-2013-1571 [1], VU#225657 [2]) Submitted by Uwe Schindler"
+1,mysql-packaging,ba2797e193325f5ec73395937a9cb11ed22fd228,Add patch for CVE-2016-5483
+1,kernel-arndale,72202f05a62ecaebfdf2008079c647eeb5e69f1d,"drm/i915: bounds check execbuffer relocation count (bnc#808829,CVE-2013-0913)."
+1,kernel-arndale,821f03cc42540adaf60c72e9a1ac311a960c18db,TTY: do not update atime/mtime on read/write (bnc#797175 CVE-2013-0160).
+1,kernel-arndale,e6b44d36c433010d334b5237e4bb8fb4c001acc1,"- xen-pciback: rate limit error messages from   xen_pcibk_enable_msi{,x}() (CVE-2013-0231 XSA-43 bnc#801178). - Update Xen patches to 3.8-rc6 and c/s 1222."
+1,kernel-arndale,4fb112d4b059bdd833834bd9f7e2aecc7acc4eac,"proc: clean up and fix /proc/<pid>/mem handling (bnc#742279, CVE-2012-0056)."
+1,kernel-arndale,7923119c3a52365ae563efb9674c2fc0bb3c3165,- patches.fixes/hfs-fix-hfs_find_init-sb-ext_tree-null-ptr-oops.patch:   hfs: fix hfs_find_init() sb->ext_tree NULL ptr oops   (CVE-2011-2203 bnc#699709).
+1,kernel-arndale,385b39373a04b55fd06c8b4845d168ccb017f058,- fs/partitions/efi.c: corrupted GUID partition tables can cause   kernel oops (bnc#687113 CVE-2011-1577).
+1,kernel-arndale,2e42fd4caaf0f01aeddcfbc8465588c9dfa81fef,- Prevent rt_sigqueueinfo and rt_tgsigqueueinfo from spoofing   the signal code (bnc#681826 CVE-2011-1020).
+1,kernel-arndale,5ef002b0523a562a38ddc3f0f9f1e246eb84cceb,"- ALSA: caiaq - Fix possible string-buffer overflow (bnc#672499,   CVE-2011-0712)."
+1,kernel-arndale,bcdc88b4fec5f45e075d7cfd1a45165ecfc1de7b,- rose: Fix signedness issues wrt. digi count (CVE-2010-3310   bnc#640721).
+1,kernel-arndale,6df45c918e319ac582029ad68de01ec37e75f609,- wext: fix potential private ioctl memory content leak   (CVE-2010-2955 bnc#635413).
+1,kernel-arndale,024dc85f9c768c46d12241ce14f4cbb72be5b8ce,- wext: fix potential private ioctl memory content leak   (CVE-2010-2955 bnc#635413).
+1,kernel-arndale,fb77404ee89e0c39edfd61cc9fe6a64ad1fb39b7,"- x86-64, compat: Test %rax for the syscall number, not %eax   (CVE-2010-3301 bnc#639708)."
+1,kernel-arndale,e6266b98cbc58a9ffe49fb4a652557fd5ddfae0d,"- x86-64, compat: Retruncate rax after ia32 syscall entry tracing   (CVE-2010-3301 bnc#639708)."
+1,kernel-arndale,664a0ac1d4264279ad3ed00d1beac8688c31f3b9,- compat: Make compat_alloc_user_space() incorporate the   access_ok() (CVE-2010-3081 bnc#639709).
+1,kernel-arndale,35e70c81ec0f0d367fa9ea3f72aa5b2950d04053,- drivers/net/usb/hso.c: prevent reading uninitialized memory   (CVE-2010-3298 bnc#639483).
+1,kernel-arndale,a0634a98e3afcc66a3dce9f63f0e6d9eb45d4789,- drivers/net/cxgb3/cxgb3_main.c: prevent reading uninitialized   stack memory (CVE-2010-3296 bnc#639481).
+1,kernel-arndale,2a7b1607f59c8942431267df54dbb037d71aa1b8,- drivers/net/eql.c: prevent reading uninitialized stack memory   (CVE-2010-3297 bnc#639482).
+1,kernel-arndale,f04e61fe30c14d56c05fcdf07e84bccbe71db161,- irda: Correctly clean up self->ias_obj on irda_bind() failure   (CVE-2010-2954 bnc#636112).
+1,kernel-arndale,66e1d72fc351d34778b99185c6c1744c1fafcce1,- net sched: fix kernel leak in act_police (CVE-2010-2942   bnc#632309).
+1,kernel-arndale,819a107c2b6df5e2bca2b2efa9e8bce119d337b8,- patches.fixes/ext4-make-sure-the-move_ext-ioctl-can-t-overwrite-append-only-files:   ext4: Make sure the MOVE_EXT ioctl can't overwrite append-only   files (bnc#612457 CVE-2010-2066).
+1,kernel-arndale,cc738af6bf87e48d36744ab67a7f0ab8e98ad7c8,- patches.fixes/gfs2-fix-writing-to-non-page-aligned-gfs2_quota-structures:   GFS2: Fix writing to non-page aligned gfs2_quota structures   (bnc#599957 CVE-2010-1436).
+1,kernel-arndale,ea0a683d5116e26c61ed4158f0182ac90b2cbce1,- patches.fixes/gfs2-fix-permissions-checking-for-setflags-ioctl:   GFS2: Fix permissions checking for setflags ioctl() (bnc#608576   CVE-2010-1641).
+1,kernel-arndale,ce7ad348d973f029bcd37ceab7ff3c1a5ff3fa12,- patches.fixes/reiserfs-fix-permissions-on-reiserfs_priv:   reiserfs: Fix permissions on .reiserfs_priv (bnc#593906   CVE-2010-1146).
+1,kernel-arndale,9a2ed35e5c783498ed7c7985ffb8e5a6d660a2a5,"- patches.drivers/e1000-enhance-frame-fragment-detection.patch:   e1000: enhance frame fragment detection (bnc#567376,   CVE-2009-4536). - patches.drivers/e1000e-enhance-frame-fragment-detection.patch:   e1000e: enhance frame fragment detection (bnc#567376,   CVE-2009-4538)."
+1,kernel-arndale,f17927a9d9d59b5ec5bf54cdbbe35e365bf3caea,- patches.fixes/firewire-ohci-handle-receive-packets-with-a-data-length-of-zero:   firewire: ohci: handle receive packets with a data length of   zero (bnc#564712 CVE-2009-4138).
+1,kernel-arndale,0d47b0f513fe1c4e1e8249a9b3b2069e57b83129,- patches.fixes/ext4-fix-insufficient-checks-in-ext4_ioc_move_ext:   ext4: Fix insufficient checks in EXT4_IOC_MOVE_EXT (bnc#561018   CVE-2009-4131).
+1,kernel-arndale,357b33295df98eee9e1b0a5a3aa5c453e48f22ba,- patches.fixes/megaraid_sas-fix-permissions-on-poll_mode_io:   megaraid_sas: Fix permissions on poll_mode_io (bnc#557180   CVE-2009-3939).
+1,kernel-arndale,5ae4c0c43f3fc689b40bf8861de26a725b04a98e,"- patches.fixes/mac80211-fix-spurious-delba-handling.patch:   mac80211: fix spurious delBA handling (bnc#558267,   CVE-2009-4026, CVE-2009-4027)."
+1,kernel-arndale,a887d0b9c0dc4aed436708316b6851a8e77d0aa7,- Update to 2.6.27.12-rc1:   - security fixes   - fixes CVE-2009-0029   - bug fixes all over the place.   - obsoletes the following patches:     - patches.arch/ppc-cmm_no_kdump.patch     - patches.drivers/alsa-caiaq-midi-oops-fix     - patches.drivers/alsa-hda-hp-6730b-quirk     - patches.drivers/ibmvfc-host_init_delay.patch     - patches.drivers/ibmvfc-improve_sync_events.patch     - patches.fixes/PCI-Suspend-and-resume-PCI-Express-ports-with-interrupts-disabled.patch     - patches.fixes/PCI-handle-PCI-state-saving-with-interrupts-disabled.patch     - patches.fixes/fs-symlink-write_begin-allocation-context-fix.patch     - patches.fixes/mm-lockless-pagecache-barrier.patch     - patches.fixes/pci-rework-suspend-of-devices-with-no-drivers.patch     - patches.fixes/uv-remove-erroneous-BAU-init - Update config files.
+1,kernel-arndale,0dd6b14ac777a3acf7f10c9b94e7a11d4c4fae34,- patches.fixes/atm-duplicate-listen-on-socket-corrupts-the-vcc-table.patch:   ATM: duplicate listen() on socket corrupts the vcc table   (CVE-2008-5079).
+1,kernel-arndale,b2f288012dd377dfde8d6c153924c17211f52587,- patches.fixes/af_unix-soft-lockup-fix.patch: net: Fix soft   lockups/OOM issues w/ unix garbage collector (bnc#449739   CVE-2008-5300).
+1,kernel-arndale,1c5a538523792e715babdb853a97610c340ceccf,- patches.fixes/fix-inotify-watch-removal-umount-races: Fix   inotify watch removal/umount races (bnc#446973 CVE-2008-5182).
+1,kernel-arndale,7e2664257ac800e555126dab9eb70d72af6760bd,- update to 2.6.27.3   - lots of bugfixes   - CVE-2008-3831 fix
+1,kernel-arndale,5c79552a01fe1c685a1aa8b0bbc29b07f596b59e,- patches.fixes/ext2-avoid-printk-flood-with-dir-corruption:   ext2: Avoid printk floods in the face of directory corruption   (bnc#427244 CVE-2008-3528). - patches.fixes/ext3-avoid-printk-flood-with-dir-corruption:   ext3: Avoid printk floods in the face of directory corruption   (bnc#427244 CVE-2008-3528).
+1,kernel-arndale,3aabaf02d4c1087e1281cb15a44505b15951eb12,- Update to 2.6.25.5.   - fixes CVE-2008-1673
+1,kernel-arndale,446d2b909f29d6a32017c9821579c2203cb74345,- patches.kernel.org/patch-2.6.25.1-2: Linux 2.6.25.2.  - fixes CVE-2008-1669
+1,kernel-arndale,c836550cf2cfd30ea2c277176461caaed983c023,- update to 2.6.25.1:   - fixes CVE-2008-1375 and CVE-2008-1675   - lots of other minor bugfixes
+1,kernel-arndale,9273b16118a0ca5b0a47592fcfde5624802dc5c9,"- Update to 2.6.24.1   - fixes CVE-2008-0007, CVE-2008-0009, CVE-2008-0010   - lots of USB device ids updated   - lots of other bugfixes   - removed patches.fixes/bootstrap-memoryless-node.patch as it is now     contained within."
+1,kernel-arndale,313a4b89435e03a8f68615854dae4d6b247285cf,"- patches.xen/handle-bogus-cs-selector-in-single-step-instruction-decoding:   Handle bogus %cs selector in single-step instruction decoding   (326270, CVE-2007-3731)."
+1,kernel-arndale,cf2c85d2a3bd02f6b3a4b55df129a468085ba0c4,"- patches.fixes/i386-fixup-TRACE_IRQ-breakage: i386: fixup   TRACE_IRQ breakage (326270, CVE-2007-3731). - patches.fixes/handle-bogus-%cs-selector-in-single-step-instruction-decoding:   Handle bogus %cs selector in single-step instruction decoding   (326270, CVE-2007-3731)."
+1,kernel-arndale,e1b909753c0ff877c7865c897fa54ecb3bed3270,- Update to 2.6.22.8   - fixes CVE-2007-4571
+1,kernel-arndale,8549944af57bed6a80bf28bb8c76fd449a953a59,- Update to 2.6.22.7:   - fixes CVE-2007-4573
+1,kernel-arndale,fa19b60336310098eac43e2f6acf397f5a687f3b,- Update to 2.6.22.4   - fixes CVE-2007-3848
+1,kernel-arndale,abe05baeba52fbffb5ec5706a3c616ebd8e1f080,"- updated to 2.6.22.2  - lots of bugfixes and also CVE-2007-3851  - removed the following patches, as they are now obsolete as they are    rolled into the 2.6.22.2 release: 	- patches.fixes/dm-raid1-fix-status.patch: Delete. 	- patches.fixes/dm-io-fix-panic-on-large-request.patch: Delete. 	- patches.fixes/dm-snapshot-permit-invalid-activation.patch: 	- patches.fixes/dm-disable-barriers.patch: Delete. - Update config files."
+1,kernel-arndale,b50a12598e7defd82357f9bdcd25913b325c5de1,"- patches.fixes/ipv6-fix-null-pointer-hole: fix a possible memory leak   (CVE-2007-1000, #252485)"
+1,kernel-arndale,5fd03e63a1bb706615da289a4fc4c6922e22a205,- Update to 2.6.18.4   - security fix (CVE-2006-5751)
+1,kernel-arndale,0af5afab4b07049d558243ce25b76ac0ac8719f3,"- Update to 2.6.18.3   - fixes a number of minor things.   - a few security fixes too, (CVE-2005-4352) is one."
+1,kernel-arndale,ce8a32c0fa554ab3db6a23128734ed665399930d,- patches.fixes/fix-prctl-privilege-escalation-and-suid_dumpable.patch:   fix prctl privilege escalation and suid_dumpable (CVE-2006-2451)   (186980).
+1,kernel-arndale,b3cb0237466b95034e86fa5d1f6e7c63bf333755,- Update to 2.6.16.19:   -  NETFILTER: Fix small information leak in SO_ORIGINAL_DST (CVE-2006-1343)
+1,kernel-arndale,5cb47e73ae861062fa3df41e7a63dafa8deb6fc6,"- Update to 2.6.16.18 (lots of bugfixes and security updates, public and non-public ones)   - fs/compat.c: fix 'if (a |= b )' typo   - smbus unhiding kills thermal management   - PCI quirk: VIA IRQ fixup should only run for VIA southbridges   - VIA quirk fixup, additional PCI IDs   - Netfilter: do_add_counters race, possible oops or info leak (CVE-2006-0039)   - Remove cond_resched in gather_stats()   - page migration: Fix fallback behavior for dirty pages   - via-rhine: zero pad short packets on Rhine I ethernet cards   - Fix udev device creation   - smbfs: Fix slab corruption in samba error path   - scx200_acb: Fix resource name use after free   - limit request_fn recursion   - TG3: ethtool always report port is TP.   - PCI: correctly allocate return buffers for osc calls   - add migratepage address space op to shmem   - Fix ptrace_attach()/ptrace_traceme()/de_thread() race   - ptrace_attach: fix possible deadlock schenario with irqs   - md: Avoid oops when attempting to fix read errors on raid10   - NETFILTER: SNMP NAT: fix memory corruption (CVE-2006-2444)   - USB: ub oops in block_uevent   - selinux: check for failed kmalloc in security_sid_to_context()   - fs/locks.c: Fix sys_flock() race   - SCTP: Respect the real chunk length when walking parameters (CVE-2006-1858)   - SCTP: Validate the parameter length in HB-ACK chunk (CVE-2006-1857)"
+1,kernel-arndale,fbe6c0d4e7899bef48a3b85530974de47b3ff1f1,- Update to 2.6.16.16:   - fs/locks.c: Fix lease_init (CVE-2006-1860)
+1,kernel-arndale,a7b41508fb08e97ba1ffa89492416b48c3c07d56,- Update to 2.6.16.15:   - SCTP: Allow spillover of receive buffer to avoid deadlock. (CVE-2006-2275)   - SCTP: Fix panic's when receiving fragmented SCTP control chunks. (CVE-2006-2272)   - SCTP: Fix state table entries for chunks received in CLOSED state. (CVE-2006-2271)   - SCTP: Prevent possible infinite recursion with multiple bundled DATA. (CVE-2006-2274)
+1,kernel-arndale,0e7d47a851bcff53f17cc12281ded6e42a215caa,- Update to 2.6.16.14:   - smbfs chroot issue (CVE-2006-1864)
+1,kernel-arndale,c210de1a98663dbe5ccfbae3b349e36fac07ab71,- Update to 2.6.16.13   - NETFILTER: SCTP conntrack: fix infinite loop (CVE-2006-1527)
+1,kernel-arndale,3f276209080f439873f30fdb74b05d11f373064f,- patches.arch/x86_64-execve-cleanup: Clean up execve path   (for next patch) (156580). - patches.arch/x86_64-force-iret: When user could have changed   RIP always force IRET [CVE-2006-0744] (156580).
+1,kernel-arndale,e5601d4d996d9bc47f1aff82856216da8a66dc96,- patches.fixes/sysfs-off-by-one.patch: sysfs: zero terminate   sysfs write buffers (CVE-2006-1055).
+1,kernel-arndale,3d5f379155307f5a15919cc41ed39a29edeedf10,+- update to 2.6.16.1 +  dm: bio split bvec fix +  TCP: Do not use inet->id of global tcp_socket when sending RST (CVE-2006-1242) +  Fix speedstep-smi assembly bug in speedstep_smi_ownership +  DMI: fix DMI onboard device discovery +  fix scheduler deadlock +  i810fb_cursor(): use GFP_ATOMIC +  NET: Ensure device name passed to SO_BINDTODEVICE is NULL terminated. +  V4L/DVB (3324): Fix Samsung tuner frequency ranges +  sata_mv: fix irq port status usage +  rtc.h broke strace(1) builds +  v9fs: assign dentry ops to negative dentries +  2.6.xx: sata_mv: another critical fix +  Kconfig: VIDEO_DECODER must select FW_LOADER +  XFS writeout fix +  proc: fix duplicate line in /proc/devices +  cciss: fix use-after-free in cciss_init_one
+1,kernel-arndale,4cf5200234d392671273632586073c7ede068f01,- patches.fixes/nfs-revalidate-race: Nfs: Avoid races between   writebacks and truncation (144058). - UPDATE - patches.fixes/nfs-direct-io-vul: Normal user can panic NFS   client with direct I/O (CVE-2006-0555) (151056).
+1,kernel-arndale,fe7039488ce153a8b2678547c54a70779745364d,+- update to 2.6.14.1 +  CVE-2005-2709 sysctl unregistration oops
+1,cassandra,c0aa79e5453d64a583ba2197b2ac76d04ecd7020,CVE-2017-5929 Security vulnerability and redefine default log rotation policy.
+1,cassandra,4bbd28a043f15dd6c19de157acb5950319e8c16c,CVE-2017-5929 Security vulnerability in Logback warning in NEWS.txt
+1,felix,e2180adcbf7f82781743667ae366d1c850811619,FELIX-5893 : JQuery Security bug CVE-2015-9251 in Web Console. Apply patch from Christanto Leonardo
+1,felix,042ecde46f7bc1115898c98161f0872461cba989,FELIX-5664 : Update Jetty to 9.3.20.v20170531 or 9.4.6.v20170531 to fix CVE-2017-9735Adjust ittest to R6 implementation
+1,open-build-service,b602ef829f5fbb823d372f405b53773ca2f6186b,Merge pull request #4689 from DavidKang/update-loofah-CVE-2018-8048
+1,ofbiz-plugins,2c37a1ba0a3d83a46482608d428fd8872f716df4,Fixed: Update Apache Tomcat to 9.0.10 because of CVE-2018-8037 (OFBIZ-10517)
+1,ofbiz-plugins,9f86cdd6aea7c9082324966c5fd170cb5b8f9261,Improved: Update Solr and Lucene from 7.2.1 to Solr 7.3.1 for security reason (CVE-2018-8010) (OFBIZ-10415)
+1,ofbiz-plugins,d80c74170a794ce4546202e7fe9e6d9659799232,Improved: Update Solr and Lucene from 7.2.1 to Solr 7.3.1 for security reason (CVE-2018-8010) (OFBIZ-10415)
+1,ofbiz-plugins,2ddc9df4523bbbd3a4f58cc95b52804630d81aa3,Improved: Update Solr/Lucene to 7.1.0 [CVE-2017-9803] [CVE-2017-12629]. (OFBIZ-9835)
+1,ofbiz-plugins,45d18be23021f2a6ce14313364b5755b160bcfaf,In framework/base/lib/ updates Xalan from 2.7.1 to 2.7.2 because of CVE-2014-0107 (was fixed at XALANJ-2435) - https://issues.apache.org/jira/browse/OFBIZ-6905 This implies to update also Xerces from 2.9.1 to 2.11.0 and also xml-apis from 2.9.1 to 1.4.01 (2.9.1 was a wrong version number. It was actually part of the Xerces 2.9.1 package but I was unable to find the real version number then at https://xerces.apache.org/xerces2-j/releases.html)
+1,ofbiz-plugins,0a24a573a2f7e22407c12de5e6eb382c5956dfe8,OFBIZ-6568: upgraded Groovy to the latest version (2.4.5). [CVE-2016-2170] The infamous Java serialization vulnerability
+1,ofbiz-plugins,750fa87261e2eca689d43f218751c6a68bf719a1,CVE-2012-1621: Escape errors returned from ajax calls in the checkout pages
+1,beam,2626fb54d94e4f60fc51cacc8fa3e745354ac3ad,[BEAM-3873] Current version of commons-compress is DOS vulnerable CVE-2018-1324
+1,beam,e577d64f2851eab3cae4c7412f57d59539108953,[BEAM-3873] Update commons-compress to version 1.16.1 (fix CVE-2018-1324)
+1,qpid-site,4a159ca29003b3784d2d1e46dc7d93973bf357c3,Update site content for CVE-2018-8030
+1,qpid-site,9ccb93178d768f2e92c68434b4f6b500c4cbcdde,Update site content for CVE-2018-8030
+1,qpid-site,0983df917c210577cec252f2b9cbcd51c7bc3dbf,add CVE-2017-15699 detail to release notes for dispatch 1.0.0 and clarify for 0.8.1
+1,qpid-site,e4a918b02ccca59c9297c0777406fcfd4cb3c5ac,Added information about new security vulnearbility CVE-2017-15699
+1,qpid-site,5d4cf889afcc479c4b23a74bdd3763d2dcecf726,NO-JIRA: Update site pages related to CVE-2017-15701 and CVE-2017-15702
+1,qpid-site,6bfb1bf48c18d6fe5d263f3ad6a323f3fb3991f2,Add CVE-2017-15701 and CVE-2017-15702 to Broker-J security page
+1,qpid-site,d6ae1f10ee549b575aa36ee5715c151e0d24b976,NO-JIRA: Add more detail to CVE-2016-4974 description
+1,openoffice,b0c1db7e469c96b52d27b745bf0944368fd7c645,Make spreadsheets ask to update links. CVE CVE-2017-3157
+1,openoffice,8aefc9870bb343048b386348a16a1dd57b86ccf1,Upgrade bundled libxml2 from version 2.9.3 to version 2.9.4 to fix: 	CVE-2016-1762 	CVE-2016-1833 	CVE-2016-1834 	CVE-2016-1835 	CVE-2016-1836 	CVE-2016-1837 	CVE-2016-1838 	CVE-2016-1839 	CVE-2016-1840 	CVE-2016-3627 	CVE-2016-3705 	CVE-2016-4449 	CVE-2016-4483 It is not known whether any of these affect OpenOffice.
+1,openoffice,f78a4bb8ff5d512c1dab2e128edb7d5fba78b03b,Upgrade bundled raptor from raptor-1.4.18 to raptor2-2.0.15 to get the fix for CVE-2012-0037.  It is not know whether this vulnerability affects OpenOffice.
+1,openoffice,4ca1d3aa72c49cc73f3009c5330f63740f08f2b7,"Upgrade bundled libxslt from version 1.1.28 to version 1.1.29 to fix:         CVE-2016-1683         CVE-2016-1684 Whether any of these affect the OpenOffice usage of libxslt is not known. OpenOffice uses libxslt for help, document signing and encryption, and for RDF."
+1,openoffice,f306dc6eb8bc9fb15fb4d8ad22790e7a78615926,"Upgrade bundled curl to version 7.50.1 to fix: 	CVE-2016-5419 	CVE-2016-5420 	CVE-2016-5421 Whether any of these affect the OpenOffice usage of curl is not known. OpenOffice only uses curl to access ftp:// URLs, which is likely to be only rarely done."
+1,openoffice,e042adb5648561542edbc465aee9c45b5d8565f9,Fix equivalent to Graphite2 CVE-2016-1521.
+1,qpid-broker-j,1d6a129a97d3eb29c8c53b6becac9702c674fb50,QPID-7599: Prevent leaking information about the existence of user accounts in SCRAM-SHA256/SCRAM-SHA1 authentication providers (Fix CVE-2016-8741)
+1,qpid-broker-j,7e6843e2e1967bfdba477a683353dbf6287d6291,QPID-7323: [Java Client] Improvements to the ObjectMessage implementation [CVE-2016-4974]
+1,qpid-broker-j,a4c8ecf0ac4884f63cfd57c07c12a144863c896c,QPID-7271: [Java Broker] Improve exception handling (fix CVE-2016-3094)
+1,qpid-broker-j,a668f9d45ed465f04855c56c01188d4b55d5f8bb,QPID-7257: [Java Broker] Correct connection state logging (fix CVE-2016-4432)
+1,osem,dda6587ed343b17f33d4f6bb6b791d23c6919579,CVE-2018-3760: Update sprockets
+1,osem,0c6d1fa23386a51868bef4703c155aaaf2804023,Update rails-html-sanitizer re: CVE-2018-8048
+1,osem,96d59946730d64f28d474e41a46e4a104a5bd576,CVE-2018-8048: Update loofah
+1,osem,d08d05416f4788f80ecee854098263333907be3c,Fixes CVE-2014-7819
+1,osem,acc28d22ae71e097fdd325ade7e66b6f5c6e5a1b,Fixes CVE-2014-7829
+1,osem,7cf444f3bbf4660a3264878b79d02301a53836c3,Update rails/sprockets to fix CVE-2014-7818/CVE-2014-7819
+1,osem,f2bbb68ad9d1e2a078fce2e855196f18b1349c47,Update rails to address CVE-2014-3514. Fix the deployment
+1,osem,7189221f8e833613eeaa2f701a8dd8213191875f,Fix CVE-2014-3483 - rails active record vulnerability
+1,openmeetings,a974b07ec70600e87c0ec39778051d1da1f98f49,no jira: security page is updated with CVE-2017-5878 details
+1,openmeetings,d99b5f43337acc3dc29435cab96280764f07a242,no jira: CVE-2016-8736 is announced
+1,openmeetings,49711a51216cc540b82839c4bc856d42422fa0bb,no jira: CVE-2016-8736 is announced
+1,couchdb-documentation,7f35921089df8ad6a3163c09747ed285dd6465cf,docs: add CVE-2018-8007 to 1.7.x and 2.1.x release notes
+1,couchdb-documentation,86ae5c82edf59031455d6982fd7a8f8c7ef3b0ad,Add documentation for CVE-2014-2668
+1,couchdb-documentation,249718c6cca0cadfab47aec5ea2b96c63a9e863b,Update 1.6.0 notes with proper CVE-2014-2668 note
+1,couchdb-documentation,d20f569d5738f00a66771d3bc4d2420b4df62b47,Add CVE-2014-2668 warning to old release branches
+1,salt,c2dc709bcef54d23c9f2aa1d01820e470af5ddcf,Added CVE-2015-8034 to 2015.8.3 and 2015.5.8 release notes
+1,salt,5e54359869292bcb891901350065859984b01854,"Updated Debian, RHEL / Cent, Ubuntu installation instructions with new repo structure for 2015.8.3. Added CVE-2015-8034 to release notes."
+1,apr,61dde587598467613a3f6f373795a970129ba38f,"SECURITY: CVE-2015-1829 (cve.mitre.org) APR applications using APR named pipe support on Windows can be vulnerable to a pipe squatting attack from a local process; the extent of the vulnerability, when present, depends on the application. Initial analysis and report was provided by John Hernandez of Casaba Security via HP SSRT Security Alert."
+1,apr,682d0f1bb6a8d54465695e1972f26991a08c7739,Security: CVE-2011-0419 Reported by: Maksymilian Arciemowicz <cxib securityreason.com>
+1,apr,c90987cea4a9c28cb766f39d58ba6c1f3df35f68,SECURITY: CVE-2010-1623 (cve.mitre.org) Fix a denial of service attack against apr_brigade_split_line().
+1,apr,1933008dc57ed89520ceb75f45132e1eaade4c1d,"SECURITY: CVE-2009-2412 (cve.mitre.org) Fix overflow in pools and rmm, where size alignment was taking place."
+1,apr,5edc0d59cacba308f4ed692a626669f98e996721,SECURITY: CVE-2009-0023
+1,ofbiz-framework,9abaec3bf74247ccf1842bf498aa0a3d6fc38c98,Fixed: Update Apache Tomcat to 9.0.10 because of CVE-2018-8037 (OFBIZ-10517)
+1,ofbiz-framework,14fc67ddda41916d30fae83fab7dc44ce543d255,Fixed: Update Tomcat to 8.0.42 because of CVE-2017-5648 (OFBIZ-9313)
+1,ofbiz-framework,36c20a814ea17aeb9b073a8cd75b04ebd8a0fb28,Updates Shiro to 1.2.5 (CVE-2016-4437) - https://issues.apache.org/jira/browse/OFBIZ-7373
+1,ofbiz-framework,c5bb8c4bbc02f94297325f45ab5c61a6eff5ea84,"Updates OWASP dependency check files. Several changes, notably: * removes all Tomcat libs suppresses (in catalina\lib) and rather adds a sole suppress based on CVEs (current Tomcat version not concerned) * same for jsp-api-2.3 * a new vulnerability is identified: CVE-2015-1776 for hadoop libs (in solr component)"
+1,ofbiz-framework,f76b246f1838e995daac5326c2a63da4e126e119,In framework/base/lib/ updates Xalan from 2.7.1 to 2.7.2 because of CVE-2014-0107 (was fixed at XALANJ-2435) - https://issues.apache.org/jira/browse/OFBIZ-6905 This implies to update also Xerces from 2.9.1 to 2.11.0 and also xml-apis from 2.9.1 to 1.4.01 (2.9.1 was a wrong version number. It was actually part of the Xerces 2.9.1 package but I was unable to find the real version number then at https://xerces.apache.org/xerces2-j/releases.html)
+1,ofbiz-framework,04c04e27912a28c54c63eb5b8c95fc45c57b19b0,OFBIZ-6568: upgraded Groovy to the latest version (2.4.5). [CVE-2016-2170] The infamous Java serialization vulnerability
+1,ofbiz-framework,445db70c4a652efce0d065c65eedb754b68f7c2a,Updates commons-collections lib from 3.2.1 to 3.2.2 [CVE-2016-2170] The infamous Java serialization vulnerability
+1,ofbiz-framework,34de251fe7983202eabd56e4a1bc3bcdcb9e4f97,The description attribute of the display-entity element is now escaped to prevent the risk of an XSS attack. [CVE-2015-3268] Stored Cross-Site Scripting Vulnerability affecting the description attribute of the display-entity element because it was not escaped.
+1,ofbiz-framework,c1cd3ea29c3c42f8e81ce9dc356e4998f30191fd,Removed support for runtime nested expressions in FlexibleStringExpander.java. This fixes the vulnerability CVE-2013-2250
+1,ofbiz-framework,88abfbe365f4afc1eea431231bf1ca4d7bae6486,"The content rendered in the Webtools view log"" screen is now rendered from the ofbiz.log file rather then the ofbiz.html file in order to provide more control on the html code rendered in the screen. This fixes the vulnerability CVE-2013-2137"""
+1,ofbiz-framework,95f894ca8522771180624f37218d09a4bc605b99,CVE-2013-0177: The Image.alt is now escaped to prevent the risk of an XSS attack.
+1,ofbiz-framework,acf502ab4d09a241e6dda17f3bc17a7fbd5875e2,"CVE-2012-3506: Unlike descriptions and values, tooltips were not encoded, thanks to Scott for spotting it (r1377382 was flawed)"
+1,ofbiz-framework,15f579cdf5928352aa5cd4342f7dc038ac211a1c,"Upgraded Ant from 1.8.3 to 1.8.4 and Commons Compress"" from 1.4 to 1.4.1 in order to protect the system from vulnerability reported in CVE-2012-2098: Apache Commons Compress and Apache Ant denial of service vulnerability."""
+1,ofbiz-framework,8216053d6d9f95799b5b3c28be1f00f9081347a0,CVE-2012-1621: Prevent user submitted data from being streamed directly back to the browser when the content map-key is not found.  Log a warning instead.
+1,ofbiz-framework,c5a273762af65c6ee40b477984c1c10c05121494,CVE-2012-1622: Disable support for nested scripts in FlexibleStringExpander.
+1,ofbiz-framework,63ecd4d1b9d563684f5a1c1e50b8d0f254da9de6,CVE-2012-1621: Ensure that collections (except for maps) are properly encoded for html when rendered using toString() e.g.
+1,ofbiz-framework,9141247872ac9dabfd436f55261271282fa6254d,CVE-2012-1621: Escape errors returned from ajax calls in the checkout pages
+1,ofbiz-framework,077b7a2a2d1e7e7673d16fbfc28f7277db8fdcea,CVE-2012-1621: Removed the Webslinger component and all the framework dependencies on it; the reasons for this * no active committer was maintaining the webslinger component * the component was experimental and not really used by OFBiz * the component was really big (lot of jars etc...) and we are trying to slim down the OFBiz framework and keep only the essential/useful features * this fixes a security issue reported to the OFBiz PMC
+1,ofbiz-framework,355bec9ec074a4fb3a7755cedf6dc8665b2702bd,[CVE-2010-0432] Multiple fixes to the macro and html form widget renderers to ensure that all output is encoded when necessary.
+1,ofbiz-framework,62c1cf16f3c85ac2b3647e031287bfc7cb7baf26,"[CVE-2010-0432] Properly encode any error messages before attempting to write them to the response.  I'm doing it here to avoid having to do the encoding within each app's error.jsp file, I think this should be fine though."
+1,ofbiz-framework,fcd25d0223f5a6b6c53594af901b2ad4ff64bc81,"[CVE-2010-0432] Added an OFBiz specific FreeMarker TemplateExceptionHandler, ensures that any stack trace error messages are properly encoded before being dumped to the browser (or anywhere else)."
+1,ofbiz-framework,357858f067ebc9f701370bf2820bb811ba76f12e,[CVE-2010-0432] Menu widget links of type hidden-form were not correctly encoding the value attribute.
+1,spark-website,0bfb69b9b07c5c3124cd2b74a3fae90d0c0e721f,"Clarify CVE-2018-8024 doesn't affect 1.6, 2.0"
+1,spark-website,e33a4bb7d8bbc25bb6a7d96c8bd6c13e3b05e77b,Add CVE-2018-11770
+1,spark-website,85c47b70516aad3b04c46438b598d379121a4778,"Add ref to CVE-2018-1334, CVE-2018-8024"
+1,spark-website,6d90ff44d674c716e93f811cc9308144cb67f083,Added CVE-2017-12612
+1,spark-website,1c7fd01e9eb258407da07dc765444e4cf8c28f7c,Add note about CVE-2017-7678
+1,santuario-cpp,c1bf03d451ecef9c67fcdd3977767c6885ce1399,CVE-2013-2156
+1,santuario-cpp,495b42769e6e084ec0fb4bb82c8f1cfe763db940,CVE-2013-2155
+1,santuario-cpp,2e522df5434eaa66787af08cbc5434a318581491,"CVE-2013-2153, CVE-2013-2154"
+1,santuario-cpp,6e78cbb7954a38b7df98c0c55fe412ca0a97934a,"Fix for CVE-2011-2516, SANTUARIO-271"
+1,subversion,43a08e77cd5abc87d8ab42f9eda0e037f919defe,* contrib/hook-scripts/CVE-2017-9800-pre-commit.py: Move from here...
+1,subversion,4e064cf222923c6820a6131a8635da36be138d53,"* contrib/hook-scripts/CVE-2017-9800-pre-commit.py: New, a pre-commit    hook to prevent users committing svn:externals that attempt to    exploit CVE-2017-9800."
+1,subversion,04630da5b89a7cf9502441fe6b62e95d44b28440,Fix CVE-2017-9800.
+1,subversion,483924ca047937547a86334219b062889af6e457,* CHANGES (1.10.0): Drop the r1718267 entry.  This change fixes CVE-2015-5259   and has been released in Apache Subversion 1.9.3.
+1,subversion,a3d4dc70b54dd52407a70a3a26c244d711790d16,* CHANGES: Mention CVE-2016-2167 and CVE-2016-2168.  Fix typo in   the description of the r1735179 change released in 1.9.4.
+1,subversion,370df85476c29b2d4dfa7078bb67e6f05bf5e37e,* CHANGES: List CVE-2015-5259 and CVE-2015-5343.
+1,subversion,a1e2df09f5957695cb979a0a878183b881578582,The fix for CVE-2015-3184 (Subversion) and CVE-2015-3185 (httpd) broke the use of 3rd party modules such as mod_auth_kerb and mod_auth_ntlm when mandatory authn was combined with mod_authz_svn.  The problem was httpd returned a 401 response without an Authentication header meaning the client was unable to authenticate.  By returning DECLINED we allow the authn module to generate a 401 with the correct headers.
+1,subversion,bcb51fe35a508d9410a9d59958d4357446821835,* CHANGES: List CVE-2015-3184 and CVE-2015-3187.
+1,subversion,b90fdeedd022c76526881cdd3be0330b2580ab79,* CHANGES: Note which revision fixed CVE-2011-1921 and CVE-2011-1783.
+1,subversion,c3a1f2dda23a4c7402f46e63c2e300ab9bc541d5,Commit the fix for CVE-2011-1921 and CVE-2011-1783.
+1,subversion,41cf6ef30187bb1fb1ed35f5a461a9d11948c824,* CHANGES   (1.6.16): Add information about CVE-2011-0715.
+1,subversion,375ed09d53aedb3fcdbbbb9ea651c84d9bf54576,* CHANGES   (1.6.13): Add note about CVE-2010-3315.
+1,subversion,475ec9184a8b8b10f32ee790f5d2379446530a40,* trunk/www/release-history.html * trunk/www/security.html * trunk/www/security * trunk/www/security/CAN-2004-0749-advisory.txt * trunk/www/security/CVE-2007-3846-advisory.txt * trunk/www/security/mod_authz_svn-copy-advisory.txt * trunk/www/security/CAN-2004-0413-advisory.txt * trunk/www/security/CVE-2009-2411-advisory.txt * trunk/www/security/CVE-2007-2448-advisory.txt * trunk/www/svn-sscanf-advisory.txt   Move these...
+1,subversion,0269eb9858438a992de5bc311bfbec5f08d99eef,* www/security/CVE-2009-2411-advisory.txt:   Update to the latest information.
+1,subversion,5ceb1d594c57272a33b1472ab1265a9e12a20980,"In an effort to ensure that the website is updated for the public announcement, add the text for the CVE-2009-2411 advisory."
+1,subversion,9a646b525c67a78f6a07c2f0c868c5f53adab2aa,"In an effort to ensure that the website is updated for the public announcement, add the text for the CVE-2009-2411 advisory."
+1,subversion,95bb3ef9bf0cee3976788c64e8ab486d7f10e468,* CVE-2007-3846-advisory.txt: Rename from CVE-2007-3864-advisory.txt (typo).
+1,subversion,87400f5a5fe9cff02c2ec1e9fe1020763ec4d633,* www/security/CVE-2007-3864-advisory.txt: New file.
+1,subversion,867de20a1af5f891d261cf003db4ea8aa8f71f46,CVE-2007-3846: Check that client dir separator is not in a path component.
+1,subversion,c64880b7a8e57790fb292c02b92ab3e29e5d6704,"* www/security/CVE-2007-2448-advisory.txt   Fix typo, and public/private confusion."
+1,subversion,6a1bb9188b52d87044049742b799fdaeeb8c81e2,Add description of CVE-2007-2448.
+1,wink,da602013d4639d855d57abc924f97a5074b5e1fc,security advisory CVE-2010-2245.docx documentation
+1,tomcat-connectors,8f661b43a70f47069d0b58e8df59948369a385ad,CVE-2014-8111 is public so add it to the changelog.
+1,tomcat-connectors,c7dd205b858846838a50f727047e902a35675ba8,Make sure the 400 is returned to the browser. (like other connectors). The prevents a possible DOS via invalid headers and is the fix for CVE-2009-0033.
+1,tomcat-connectors,359527164af93617392a6b914b3fbbc2fd6bb3b7,"Port r673834 to 5.5.x/4.1.x Make filtering of \r and \n in headers consistent for all connectors. Make handling of 404s consistent across components. Provide option to include custom status message in headers. SRV.5.3 suggests custom messages are intended for the body of the response, not the status line. This is the security fix for CVE-2008-1232."
+1,tomcat-connectors,ed8bc8a641441353b47e3ecdc64911f4b71f5a27,Fix CVE-2005-3164
+1,myfaces-tobago,28e0d35db69efe8c8e48fcc089723b5f31cee3e7,"update deltaspike, because of CVE-2017-17837"
+1,myfaces-tobago,34e4410f2cea76c78779627665c73905e2523824,TOBAGO-1839: Cross-site scripting (XSS) vulnerability in jsoup before 1.8.3 - CVE-2015-6748
+1,myfaces-tobago,0507971848e8605524e9dd9dce16822b3f3b57e8,"Removing Tomahawk from the test, because its not important or representative. But it has some dependencies with CVE issues: [ERROR] batik-awt-util-1.6-1.jar: CVE-2015-0250 [ERROR] batik-gui-util-1.6-1.jar: CVE-2015-0250 [ERROR] batik-util-1.6-1.jar: CVE-2015-0250 [ERROR] commons-fileupload-1.2.1.jar: CVE-2014-0050, CVE-2013-0248 This was generated by mvn dependency-check:check"
+1,myfaces-tobago,36479f7714e26ef3d25c4bece063c324eaf935c8,TOBAGO-1364: CVE-2014-0050 Apache Commons FileUpload DoS
+1,myfaces-tobago,d1738cab9cb487293d92f8b84f9c79be1c5bbfe9,TOBAGO-1364: CVE-2014-0050 Apache Commons FileUpload DoS
+1,bodhi,5c02cd15d509cd931fb5dd8076565e02e9d677c7,CVE-2017-1002152: Sanitize Bugzilla titles in rendered HTML.
+1,bodhi,4299b0fff19f0f4ab168326bd47ceeeae38516a2,- Support bug aliases (ie CVE-2007-5201) - Add a test case for testing bug aliases - Remove more close_bugs reminents
+1,ambari-infra,b4f872881cfbf01f340481cffc02a1b233d5a5c8,AMBARI-24431. Infra Manager / Log Search: Fix Jetty CVE-2018-12536. (#2002)
+1,commons-compress,1efa5de83e0f00fec485fbc9669e17d30556ed98,update security page with CVE-2018-11771
+1,commons-compress,d3dac8c0f50b2e7ae97b764034823adce6878287,include CVE-2018-1324 in limitations page
+1,commons-compress,8f702469cbf4c451b6dea349290bc4af0f6f76c7,[CVE-2012-2098] Actually this shift is supposed to be unsigned.
+1,commons-compress,0600296ab8f8a0bbdfedd483f51b38005eb8e34e,"[CVE-2012-2098] Integrate fallback sort into the rest, add some more tests and fix bug in bucket boundary calculation"
+1,commons-compress,fdd7459bc5470e90024dbe762249166481cce769,[CVE-2012-2098] add fallback sorting algorithm of libbzip2 1.0.6 (actually added with 0.9.5)
+1,cloudstack,ec1d1e50c5bdea785fd5784700b47d561830ff46,Merge pull request #1742 from shapeblue/cve-2016-6813
+1,cloudstack,f1e05ac344cfde0d1a82cd6d615b341af51d60db,Added CVE-2012-4501 as fixed in the CHANGES file
+1,kernel-source,e98ba103923a29fb94d882afbda25efa53310ff4,alarmtimer: Prevent overflow for relative nanosleep (CVE-2018-13053 bsc#1099924).
+1,kernel-source,94bf968c4c884e471c1fb4e969b794a6b16db10d,socket: close race condition between sock_close() and sockfs_setattr() (CVE-2018-12232 bsc#1097593).
+1,kernel-source,41ecb4071701a79e788b753e1e61e504d778bde7,"xfs: set format back to extents if xfs_bmap_extents_to_btree (bsc#1090717, CVE-2018-10323)."
+1,kernel-source,7d4f2570e2b3b814413eca9d46616883e6f0fed7,x86/pti: Mark constant arrays as __initconst (bsc#1068032 CVE-2017-5753).
+1,kernel-source,cc0569de51ada990da2a37b18d347447f409985c,"x86/cpuid: Fix up virtual"" IBRS/IBPB/STIBP feature bits on Intel (bsc#1068032 CVE-2017-5753)."""
+1,kernel-source,cd20d46dd4fabe930267412e5d6ca3bf6760bd0a,"- x86/speculation: Add basic IBRS support infrastructure   (bsc#1068032 CVE-2017-5753). - x86/pti: Do not enable PTI on CPUs which are not vulnerable   to Meltdown (bsc#1068032 CVE-2017-5753). - x86/cpufeature: Blacklist SPEC_CTRL/PRED_CMD on early Spectre   v2 microcodes (bsc#1068032 CVE-2017-5753). - x86/nospec: Fix header guards names (bsc#1068032 CVE-2017-5753). - x86/bugs: Drop one mitigation"" from dmesg (bsc#1068032   CVE-2017-5753). - x86/cpu/bugs: Make retpoline module warning conditional   (bsc#1068032 CVE-2017-5753). - x86/cpufeatures: Clean up Spectre v2 related CPUID flags   (bsc#1068032 CVE-2017-5753). - x86/retpoline: Simplify vmexit_fill_RSB() (bsc#1068032   CVE-2017-5753). - x86/speculation: Simplify indirect_branch_prediction_barrier()   (bsc#1068032 CVE-2017-5753). - module/retpoline: Warn about missing retpoline in module   (bsc#1068032 CVE-2017-5753). - x86/spectre: Check CONFIG_RETPOLINE in command line parser   (bsc#1068032 CVE-2017-5753). - x86/speculation: Use Indirect Branch Prediction Barrier in   context switch (bsc#1068032 CVE-2017-5753). - Refresh   patches.suse/0001-x86-cpufeatures-Add-CPUID_7_EDX-CPUID-leaf.patch. - Refresh   patches.suse/0002-x86-cpufeatures-Add-Intel-feature-bits-for-Speculati.patch. - Refresh   patches.suse/0003-x86-cpufeatures-Add-AMD-feature-bits-for-Speculation.patch. - Refresh   patches.suse/0004-x86-msr-Add-definitions-for-new-speculation-control-.patch. - Refresh   patches.suse/0007-x86-speculation-Add-basic-IBPB-Indirect-Branch-Predi.patch. - Refresh patches.suse/supported-flag. - Delete   patches.suse/0005-x86-pti-Do-not-enable-PTI-on-processors-which-are-no.patch. - Delete   patches.suse/0006-x86-cpufeature-Blacklist-SPEC_CTRL-on-early-Spectre-.patch. - Delete patches.suse/0008-x86-kvm-Add-IBPB-support.patch. - Delete   patches.suse/0009-x86-speculation-Use-Indirect-Branch-Prediction-Barri.patch. - Delete   patches.suse/0010-x86-mm-Only-flush-indirect-branches-when-switching-i.patch. - Delete   patches.suse/0011-x86-speculation-Add-basic-IBRS-support-infrastructur.patch. - Delete   patches.suse/0017-x86-ibrs-Add-new-helper-macros-to-save-restore-MSR_I-fix.patch. - Delete   patches.suse/0017-x86-ibrs-Add-new-helper-macros-to-save-restore-MSR_I.patch. - Delete   patches.suse/0018-x86-vmx-Direct-access-to-MSR_IA32_SPEC_CTRL.patch."""
+1,kernel-source,8343cabd2f4e07f1b275d3a1b165c86125c253b7,"- Documentation: Document array_index_nospec (bsc#1068032   CVE-2017-5715). - array_index_nospec: Sanitize speculative array de-references   (bsc#1068032 CVE-2017-5715). - x86: Implement array_index_mask_nospec (bsc#1068032   CVE-2017-5715). - x86: Introduce barrier_nospec (bsc#1068032 CVE-2017-5715). - x86: Introduce __uaccess_begin_nospec() and uaccess_try_nospec   (bsc#1068032 CVE-2017-5715). - x86/usercopy: Replace open coded stac/clac with   __uaccess_{begin, end} (bsc#1068032 CVE-2017-5715). - x86/syscall: Sanitize syscall table de-references under   speculation (bsc#1068032 CVE-2017-5715). - nl80211: Sanitize array index in parse_txq_params (bsc#1068032   CVE-2017-5715). - x86/spectre: Report get_user mitigation for spectre_v1   (bsc#1068032 CVE-2017-5715). - Delete patches.suse/0001-Documentation-document-array_ptr.patch. - Delete   patches.suse/0002-asm-nospec-array_ptr-sanitize-speculative-array-de-r.patch. - Delete patches.suse/0003-x86-implement-array_ptr_mask.patch. - Delete   patches.suse/0004-x86-introduce-__uaccess_begin_nospec-and-ifence.patch. - Delete   patches.suse/0007-x86-narrow-out-of-bounds-syscalls-to-sys_read-under-.patch. - Delete   patches.suse/0009-kvm-x86-update-spectre-v1-mitigation.patch. - Delete   patches.suse/0010-nl80211-sanitize-array-index-in-parse_txq_params.patch."
+1,kernel-source,13295d4bfe9d5d6cdf186c41889ade92aebaa0ed,x86/ibrs: Add new helper macros to save/restore MSR_IA32_SPEC_CTRL fix (bsc#1068032 CVE-2017-5753).
+1,kernel-source,8d8b71829ce862d99f5a21746f4a852b991206e4,- x86/cpufeature: Move processor tracing out of scattered features   (bsc#1068032 CVE-2017-5753). - Refresh   patches.suse/0001-x86-cpufeatures-Add-CPUID_7_EDX-CPUID-leaf.patch. - Refresh   patches.suse/0007-x86-speculation-Add-basic-IBPB-Indirect-Branch-Predi.patch.
+1,kernel-source,e36ab4fd68a23558c3163bc9b14ee6b8466a25ab,x86/vmx: Direct access to MSR_IA32_SPEC_CTRL (bsc#1068032 CVE-2017-5753).
+1,kernel-source,ea7a9840f571bafe1311c97724c8192d79784af2,x86/ibrs: Add new helper macros to save/restore MSR_IA32_SPEC_CTRL (bsc#1068032 CVE-2017-5753).
+1,kernel-source,405de6396bc338f4cf91c99d0de81eb1d96a44f7,x86/enter: Use IBRS on syscall and interrupts (bsc#1068032 CVE-2017-5753).
+1,kernel-source,9509b823977e7a324fe72faeeb96022ffe896f1f,x86/enter: Create macros to restrict/unrestrict Indirect Branch Speculation (bsc#1068032 CVE-2017-5753).
+1,kernel-source,06f535485fcca281052b59fdefce0d2d74d409a7,x86/idle: Control Indirect Branch Speculation in idle (bsc#1068032 CVE-2017-5753).
+1,kernel-source,dcddcbff9cbf55080e72706ebbab93b777c49c5a,x86: Simplify spectre_v2 command line parsing (bsc#1068032 CVE-2017-5753).
+1,kernel-source,a9da8ea795c94575e463f87f497753e6345f6085,x86/speculation: Add inlines to control Indirect Branch Speculation (bsc#1068032 CVE-2017-5753).
+1,kernel-source,c1393bdd1b784ec78fbca0ead13ae9d370ab3c5c,x86/speculation: Add basic IBRS support infrastructure (bsc#1068032 CVE-2017-5753).
+1,kernel-source,efa5d45424b2265be4b63dc2497e5e2e3a026a88,x86/mm: Only flush indirect branches when switching into non dumpable process (bsc#1068032 CVE-2017-5753).
+1,kernel-source,32b0eb94e05cb57bfc0e7afa8995e31e7cf4745e,x86/speculation: Use Indirect Branch Prediction Barrier in context switch (bsc#1068032 CVE-2017-5753).
+1,kernel-source,61a9bc031560dcc8427dda583695fe1ed3d7cf90,x86/kvm: Add IBPB support (bsc#1068032 CVE-2017-5753).
+1,kernel-source,f7e8150067873e2b23d8de7274b787f78e00b5ea,x86/speculation: Add basic IBPB (Indirect Branch Prediction Barrier) support (bsc#1068032 CVE-2017-5753).
+1,kernel-source,3bf92bd4a6157260a37b5aac3b6bdfae8cd02c2a,x86/cpufeature: Blacklist SPEC_CTRL on early Spectre v2 microcodes (bsc#1068032 CVE-2017-5753).
+1,kernel-source,68ffad42b948dac86013f2f0157acaaea6e95afd,x86/pti: Do not enable PTI on processors which are not vulnerable to Meltdown (bsc#1068032 CVE-2017-5753).
+1,kernel-source,9123b222eace6f64c5313819307b3326c44df5f5,x86/msr: Add definitions for new speculation control MSRs (bsc#1068032 CVE-2017-5753).
+1,kernel-source,5754c16b8dbd6683678a494ac2b2d8d4c64a92c1,x86/cpufeatures: Add AMD feature bits for Speculation Control (bsc#1068032 CVE-2017-5753).
+1,kernel-source,5335ad62351925cc443276759cd048ff9c14d142,x86/cpufeatures: Add Intel feature bits for Speculation Control (bsc#1068032 CVE-2017-5753).
+1,kernel-source,c388063e24e5009db22e0c6f76ed489298a3bca1,x86/cpufeatures: Add CPUID_7_EDX CPUID leaf (bsc#1068032 CVE-2017-5753).
+1,kernel-source,ccfa622017c44d9849455b61a1e81eaba16b3bb9,x86/retpoline: Optimize inline assembler for vmexit_fill_RSB (bsc#1068032 CVE-2017-5753).
+1,kernel-source,8dc7c711c790caa528f27fa815a3149f3804613c,x86/retpoline: Add LFENCE to the retpoline/RSB filling RSB macros (bsc#1068032 CVE-2017-5753).
+1,kernel-source,d80d6359b32e3636c65b72d031382d2f105860b9,x86/retpoline: Fill RSB on context switch for affected CPUs (bsc#1068032 CVE-2017-5753).
+1,kernel-source,804f8a127244c476719005e32993f8f9f0244924,"- Documentation: document array_ptr (bsc#1068032 CVE-2017-5715). - asm/nospec, array_ptr: sanitize speculative array de-references   (bsc#1068032 CVE-2017-5715). - x86: implement array_ptr_mask() (bsc#1068032 CVE-2017-5715). - x86: introduce __uaccess_begin_nospec and ifence (bsc#1068032   CVE-2017-5715). - x86, __get_user: use __uaccess_begin_nospec (bsc#1068032   CVE-2017-5715). - x86, get_user: use pointer masking to limit speculation   (bsc#1068032 CVE-2017-5715). - x86: narrow out of bounds syscalls to sys_read under speculation   (bsc#1068032 CVE-2017-5715). - vfs, fdtable: prevent bounds-check bypass via speculative   execution (bsc#1068032 CVE-2017-5715). - kvm, x86: update spectre-v1 mitigation (bsc#1068032   CVE-2017-5715). - nl80211: sanitize array index in parse_txq_params (bsc#1068032   CVE-2017-5715). - Delete   patches.suse/0003-locking-barriers-introduce-new-observable-speculatio.patch. - Delete   patches.suse/0004-bpf-prevent-speculative-execution-in-eBPF-interprete.patch. - Delete   patches.suse/0005-x86-bpf-jit-prevent-speculative-execution-when-JIT-i.patch. - Delete   patches.suse/0006-uvcvideo-prevent-speculative-execution.patch. - Delete   patches.suse/0007-carl9170-prevent-speculative-execution.patch. - Delete   patches.suse/0008-p54-prevent-speculative-execution.patch. - Delete   patches.suse/0009-qla2xxx-prevent-speculative-execution.patch. - Delete   patches.suse/0010-cw1200-prevent-speculative-execution.patch. - Delete   patches.suse/0011-Thermal-int340x-prevent-speculative-execution.patch. - Delete   patches.suse/0012-ipv4-prevent-speculative-execution.patch. - Delete   patches.suse/0013-ipv6-prevent-speculative-execution.patch. - Delete patches.suse/0014-fs-prevent-speculative-execution.patch. - Delete   patches.suse/0015-net-mpls-prevent-speculative-execution.patch. - Delete   patches.suse/0016-udf-prevent-speculative-execution.patch. - Delete   patches.suse/0017-userns-prevent-speculative-execution.patch."
+1,kernel-source,5d5345ee478de0bde69cc788e9986dfd0da1c8d5,Update config files (bsc#1068032 CVE-2017-5715).
+1,kernel-source,5fdfc1ab5cf8cc320159cb8b7885ec457b2b8c8c,"bpf, array: fix overflow in max_entries and undefined behavior in index_mask (bsc#1068032 CVE-2017-5753)."
+1,kernel-source,0eca3035b68be2efec2ff3543dc5c615f07cef6f,bpf: prevent out-of-bounds speculation (bsc#1068032 CVE-2017-5753).
+1,kernel-source,33b16eb2e8611990753131ab5f571c9497791e3f,- x86/cpu/AMD: Make LFENCE a serializing instruction (bsc#1068032   CVE-2017-5754). - x86/cpu/AMD: Use LFENCE_RDTSC in preference to MFENCE_RDTSC   (bsc#1068032 CVE-2017-5754). - Delete   patches.suse/0001-x86-cpu-AMD-Make-the-LFENCE-instruction-serialized.patch. - Delete   patches.suse/0002-x86-cpu-AMD-Remove-now-unused-definition-of-MFENCE_R.patch.
+1,kernel-source,ee4aa6250a300c031051e516121483c77e0aed15,userns: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,96c314a8ddd00f08c3d407425c11a9c8adde1b95,udf: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,428aa33d1774d0949f2994d542a7c249b13b850d,net: mpls: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,5711c68c01413c62692c788e3cd647110cafecc9,fs: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,15a775874dd93b53641a226dcb6c811569a19c8f,ipv6: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,7badc3607bfbe2d8058b1dca986a90b933bf63ae,ipv4: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,c23bd6e3cd6bf6bf661da35127fa7743f83d7d1b,Thermal/int340x: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,91002a9af86d8d270ce6d2353b8838ffd9017600,cw1200: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,f7137fa0999b5d054bae8dcbb865c1904c71e151,qla2xxx: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,08ab664d7d0b71fede57abbf2df4ef82e8f1a803,p54: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,5fdc29b4dbe716fc8afad22e48264d40b604f913,carl9170: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,cfde5b6fdef43f17abe51db86124b74a489d68d5,uvcvideo: prevent speculative execution (bnc#1068032 CVE-2017-5753).
+1,kernel-source,8db2433f0c3832e841bf7b0f2de4d50aee9ad990,"x86, bpf, jit: prevent speculative execution when JIT is enabled (bnc#1068032 CVE-2017-5753)."
+1,kernel-source,8464d17b0992c0a45986fc025c3b5e0ea2f6a8f1,bpf: prevent speculative execution in eBPF interpreter (bnc#1068032 CVE-2017-5753).
+1,kernel-source,c7179745731094d0ec99221b4f0cbb2ed054a7df,locking/barriers: introduce new observable speculation barrier (bnc#1068032 CVE-2017-5753).
+1,kernel-source,4d3c9c56f6c0042e3b7cab01067f01d966b77077,x86/cpu/AMD: Remove now unused definition of MFENCE_RDTSC feature (bnc#1068032 CVE-2017-5753).
+1,kernel-source,04810e222b3d89fb678f6f3ca2246e768f4624f8,x86/cpu/AMD: Make the LFENCE instruction serialized (bnc#1068032 CVE-2017-5753).
+1,kernel-source,2a04ad0511ac03e9ea3e1fd56adb12f448d60172,dvb_frontend: don't use-after-free the frontend struct (bsc#1067087 CVE-2017-16648).
+1,kernel-source,c6cd519c29db497d9ad50a0f5a46d99b03e1d0ea,media: dib0700: fix invalid dvb_detach argument (CVE-2017-16646 bsc#1067105).
+1,kernel-source,0cd38c275c6cc987935e2b15a5135d47e5251f19,media: imon: Fix null-ptr-deref in imon_probe (CVE-2017-16537 bsc#1066573).
+1,kernel-source,3002effd01fdbcbdfed7b8c982fa80405d87d732,[media] cx231xx-cards: fix NULL-deref on missing association descriptor (CVE-2017-16536 bsc#1066606).
+1,kernel-source,19d19fc2d7ea07482a7f0d6587e4cec9d5498ba4,mac80211: accept key reinstall without changing anything (CVE-2017-13080 bsc#1063667).
+1,kernel-source,6d93561f65b2b7a106862f42ac4ac61c87b39f0c,nl80211: check for the required netlink attributes presence (bsc#1058410 CVE-2017-12153).
+1,kernel-source,c0b7e1fc07304b1a196bdd81f66804c9e5858e12,Bluetooth: validate output buffer length for config requests and responses (bnc#1057389 CVE-2017-1000251).
+1,kernel-source,aacb454f1fceb4a3798d1642397fd13ced053b63,"scsi: qla2xxx: Fix an integer overflow in sysfs code (bsc#1056588, CVE-2017-14051)."
+1,kernel-source,8c4cd718b44ea42b4bf8080433ecc76366e4b87e,drm/vmwgfx: fix integer overflow in vmw_surface_define_ioctl() (boo#1031440 CVE-2017-7294).
+1,kernel-source,09d70aabd72568c9d0259261e0c6e9fa60c529f3,drm/vmwgfx: NULL pointer dereference in vmw_surface_define_ioctl() (boo#1031052 CVE-2017-7261).
+1,kernel-source,4dc7b4dde68032cec7b6aeea1103167467f88268,"scsi: sg: check length passed to SG_NEXT_CMD_LEN (bsc#1030213, CVE-2017-7187)."
+1,kernel-source,31f5da381498b403e723af62849d12de4f849288,tty: n_hdlc: get rid of racy n_hdlc.tbuf (bnc#1027565 CVE-2017-2636).
+1,kernel-source,f66af517edda169953e3a653c96b3268d9b9861a,Don't feed anything but regular iovec's to blk_rq_map_user_iov (CVE-2016-9576 bsc#1013604).
+1,kernel-source,dcfac88d9317feffef7d661f547fa94947e85854,xc2028: Fix use-after-free bug properly (CVE-2016-7913 bsc#1010478).
+1,kernel-source,0a6dcd2887f5902e12f72cce67b660953f75196e,net: add recursion limit to GRO (CVE-2016-7039 bsc#1001486).
+1,kernel-source,60fc5122058d47498aa0794f5bdae05cd162eb70,scsi: arcmsr: Buffer overflow in arcmsr_iop_message_xfer() (bsc#999932 CVE-2016-7425).
+1,kernel-source,39024c18ca0478fec3bfaab5a9935db70fe5ac7f,- aacraid: Check size values after double-fetch from user   (CVE-2016-6480 bsc#991608). - Delete   patches.drivers/0001-aacraid-prevent-out-of-bounds-access-due-to-changing.patch.
+1,kernel-source,162f9696414b608006242d907f718d4591e02201,"aacraid: prevent out-of-bounds access due to changing fip header sizes (bsc#991608, CVE-2016-6480)."
+1,kernel-source,400855703e914a13d09a503c010826580922bad1,"vfs: ioctl: prevent double-fetch in dedupe ioctl (CVE-2016-6516,bsc#991604)."
+1,kernel-source,10e550ee70050a8ddec380a2a6ec6fa415a6313f,Update patches.fixes/netfilter-x_tables-speed-up-jump-target-validation.patch references (CVE-2016-4998 bsc#986365).
+1,kernel-source,d1fa560cb343f79c3e5e954b5e8920b275a77e87,"apparmor: fix arg_size computation for when setprocattr is null terminated (CVE-2016-6187,bsc#988307)."
+1,kernel-source,9105e0d11f5735b844b673dbb3ed730eb79d6f69,netfilter: x_tables: speed up jump target validation (CVE-2016-4997 bsc#986362).
+1,kernel-source,0646d06a879b902f5e8dc4fb172f811e08ce2f07,"HID: hiddev: validate num_values for HIDIOCGUSAGES, HIDIOCSUSAGES commands (bsc#986572 CVE-2016-5829)."
+1,kernel-source,1847ef5b0ce6ce6cda6a4997b0053fe4aae293b2,rds: fix an infoleak in rds_inc_info_copy (bsc#983213 CVE-2016-5244).
+1,kernel-source,c50d3aaaeacc6174ef5b834c43db37650368673e,ecryptfs: don't allow mmap when the lower file system doesn't allow it (bsc#983143 CVE-2016-1583).
+1,kernel-source,353e24bba5a0baaa26bedc69de6b353f13b17c46,tipc: check nl sock before parsing nested attributes (CVE-2016-4951 bsc#981058).
+1,kernel-source,ffec37bea89e170cf7ca201d672ba987e220b6db,"kvm: Remove variable physbase MTRR 0x2f8 (bsc#979715, CVE-2016-3713)."
+1,kernel-source,4715b8354af09f3942991af146c45ac500de5ff4,"net: fix infoleak in llc (bsc#978821, CVE-2016-4485)."
+1,kernel-source,83f4fd26f3d00c0e21012141d748613a09a91288,"Update tags in two patches for CVE-2016-4578, bsc#979879"
+1,kernel-source,daf373fe828ee9626ad1dd4a9fb078cb39137bc9,"ALSA: timer: Fix leak in events via snd_timer_user_tinterrupt (CVE-2016-4569,bsc#979213)."
+1,kernel-source,2ed14426796fa455370345e3e604642474f182f5,"ALSA: timer: Fix leak in events via snd_timer_user_ccallback (CVE-2016-4569,bsc#979213)."
+1,kernel-source,42c0549ac2077cc13435fa76a5acd3d526be4b07,"ALSA: timer: Fix leak in SNDRV_TIMER_IOCTL_PARAMS (CVE-2016-4569,bsc#979213)."
+1,kernel-source,833651123ec7cf63e983346ec45cd2401ff42680,"ALSA: usb-audio: Add sanity checks for endpoint accesses (CVE-2016-2184,bsc#971125)."
+1,kernel-source,08689b6ee1f9c5e17f206a8c7e9d79cf8647581f,"ALSA: usb-audio: Fix NULL dereference in create_fixed_stream_quirk() (CVE-2016-2184,bsc#971125)."
+1,kernel-source,36255cbfb2a4ab2cc30ac441e130685956fed924,"n_tty: Fix unsafe reference to other"" ldisc (bnc#961500 CVE-2016-0723)."""
+1,kernel-source,1b6660b35d874915e6e957ba153076760c0dcfd7,tty: Fix unsafe ldisc reference via ioctl(TIOCGETD) (bnc#961500 CVE-2016-0723).
+1,kernel-source,e2007ee20efaf3f638a2b117f726820a6b68a517,"patches.fixes/keys-fix-leak.patch: (bnc#962075, CVE-2016-0728)."
+1,kernel-source,f554650d8131b69c57f69a811a354deed3c5ed2b,"[media] media/vivid-osd: fix info leak in ioctl (CVE-2015-7884, bnc#951626)."
+1,kernel-source,da9163717df0ec47271b4ecc6dc7d34fc6bc919a,"staging/dgnc: fix info leak in ioctl (CVE-2015-7885, boo#951627)."
+1,kernel-source,f6299c2be7baf784b1968fd04be63334515b9ffe,n_tty: Fix n_tty_write crash when echoing in raw mode (bnc#871252 bnc#875690 CVE-2014-0196).
+1,kernel-source,79c42c58b36053c73a3bbe8198cb5564e68e5612,cifs: ensure that uncached writes handle unmapped areas correctly (bnc#864025 CVE-2014-00691).
+1,kernel-source,7e6b5dee449e4e59a252ebbba00000e42c93209a,- Linux 3.13.2 (bnc#860993 CVE-2014-0038). - Delete patches.fixes/compat_sys_recvmmsg-x32-fix.patch. - Refresh patches.xen/xen3-patch-2.6.37. - Refresh patches.xen/xen3-patch-3.10.
+1,kernel-source,b4ff60b9109d59217c1da32f4b99cf391ad74048,compat_sys_recvmmsg X32 fix (bnc#860993 CVE-2014-0038).
+1,kernel-source,07999115e0b4439b677481d4a6b4f9167d7cdd5f,"iscsi-target: fix heap buffer overflow on error (CVE-2013-2850, bnc#821560)."
+1,kernel-source,72202f05a62ecaebfdf2008079c647eeb5e69f1d,"drm/i915: bounds check execbuffer relocation count (bnc#808829,CVE-2013-0913)."
+1,kernel-source,821f03cc42540adaf60c72e9a1ac311a960c18db,TTY: do not update atime/mtime on read/write (bnc#797175 CVE-2013-0160).
+1,kernel-source,e6b44d36c433010d334b5237e4bb8fb4c001acc1,"- xen-pciback: rate limit error messages from   xen_pcibk_enable_msi{,x}() (CVE-2013-0231 XSA-43 bnc#801178). - Update Xen patches to 3.8-rc6 and c/s 1222."
+1,kernel-source,4fb112d4b059bdd833834bd9f7e2aecc7acc4eac,"proc: clean up and fix /proc/<pid>/mem handling (bnc#742279, CVE-2012-0056)."
+1,kernel-source,7923119c3a52365ae563efb9674c2fc0bb3c3165,- patches.fixes/hfs-fix-hfs_find_init-sb-ext_tree-null-ptr-oops.patch:   hfs: fix hfs_find_init() sb->ext_tree NULL ptr oops   (CVE-2011-2203 bnc#699709).
+1,kernel-source,385b39373a04b55fd06c8b4845d168ccb017f058,- fs/partitions/efi.c: corrupted GUID partition tables can cause   kernel oops (bnc#687113 CVE-2011-1577).
+1,kernel-source,2e42fd4caaf0f01aeddcfbc8465588c9dfa81fef,- Prevent rt_sigqueueinfo and rt_tgsigqueueinfo from spoofing   the signal code (bnc#681826 CVE-2011-1020).
+1,kernel-source,5ef002b0523a562a38ddc3f0f9f1e246eb84cceb,"- ALSA: caiaq - Fix possible string-buffer overflow (bnc#672499,   CVE-2011-0712)."
+1,kernel-source,bcdc88b4fec5f45e075d7cfd1a45165ecfc1de7b,- rose: Fix signedness issues wrt. digi count (CVE-2010-3310   bnc#640721).
+1,kernel-source,6df45c918e319ac582029ad68de01ec37e75f609,- wext: fix potential private ioctl memory content leak   (CVE-2010-2955 bnc#635413).
+1,kernel-source,024dc85f9c768c46d12241ce14f4cbb72be5b8ce,- wext: fix potential private ioctl memory content leak   (CVE-2010-2955 bnc#635413).
+1,kernel-source,fb77404ee89e0c39edfd61cc9fe6a64ad1fb39b7,"- x86-64, compat: Test %rax for the syscall number, not %eax   (CVE-2010-3301 bnc#639708)."
+1,kernel-source,e6266b98cbc58a9ffe49fb4a652557fd5ddfae0d,"- x86-64, compat: Retruncate rax after ia32 syscall entry tracing   (CVE-2010-3301 bnc#639708)."
+1,kernel-source,664a0ac1d4264279ad3ed00d1beac8688c31f3b9,- compat: Make compat_alloc_user_space() incorporate the   access_ok() (CVE-2010-3081 bnc#639709).
+1,kernel-source,35e70c81ec0f0d367fa9ea3f72aa5b2950d04053,- drivers/net/usb/hso.c: prevent reading uninitialized memory   (CVE-2010-3298 bnc#639483).
+1,kernel-source,a0634a98e3afcc66a3dce9f63f0e6d9eb45d4789,- drivers/net/cxgb3/cxgb3_main.c: prevent reading uninitialized   stack memory (CVE-2010-3296 bnc#639481).
+1,kernel-source,2a7b1607f59c8942431267df54dbb037d71aa1b8,- drivers/net/eql.c: prevent reading uninitialized stack memory   (CVE-2010-3297 bnc#639482).
+1,kernel-source,f04e61fe30c14d56c05fcdf07e84bccbe71db161,- irda: Correctly clean up self->ias_obj on irda_bind() failure   (CVE-2010-2954 bnc#636112).
+1,kernel-source,66e1d72fc351d34778b99185c6c1744c1fafcce1,- net sched: fix kernel leak in act_police (CVE-2010-2942   bnc#632309).
+1,kernel-source,819a107c2b6df5e2bca2b2efa9e8bce119d337b8,- patches.fixes/ext4-make-sure-the-move_ext-ioctl-can-t-overwrite-append-only-files:   ext4: Make sure the MOVE_EXT ioctl can't overwrite append-only   files (bnc#612457 CVE-2010-2066).
+1,kernel-source,cc738af6bf87e48d36744ab67a7f0ab8e98ad7c8,- patches.fixes/gfs2-fix-writing-to-non-page-aligned-gfs2_quota-structures:   GFS2: Fix writing to non-page aligned gfs2_quota structures   (bnc#599957 CVE-2010-1436).
+1,kernel-source,ea0a683d5116e26c61ed4158f0182ac90b2cbce1,- patches.fixes/gfs2-fix-permissions-checking-for-setflags-ioctl:   GFS2: Fix permissions checking for setflags ioctl() (bnc#608576   CVE-2010-1641).
+1,kernel-source,ce7ad348d973f029bcd37ceab7ff3c1a5ff3fa12,- patches.fixes/reiserfs-fix-permissions-on-reiserfs_priv:   reiserfs: Fix permissions on .reiserfs_priv (bnc#593906   CVE-2010-1146).
+1,kernel-source,9a2ed35e5c783498ed7c7985ffb8e5a6d660a2a5,"- patches.drivers/e1000-enhance-frame-fragment-detection.patch:   e1000: enhance frame fragment detection (bnc#567376,   CVE-2009-4536). - patches.drivers/e1000e-enhance-frame-fragment-detection.patch:   e1000e: enhance frame fragment detection (bnc#567376,   CVE-2009-4538)."
+1,kernel-source,f17927a9d9d59b5ec5bf54cdbbe35e365bf3caea,- patches.fixes/firewire-ohci-handle-receive-packets-with-a-data-length-of-zero:   firewire: ohci: handle receive packets with a data length of   zero (bnc#564712 CVE-2009-4138).
+1,kernel-source,0d47b0f513fe1c4e1e8249a9b3b2069e57b83129,- patches.fixes/ext4-fix-insufficient-checks-in-ext4_ioc_move_ext:   ext4: Fix insufficient checks in EXT4_IOC_MOVE_EXT (bnc#561018   CVE-2009-4131).
+1,kernel-source,357b33295df98eee9e1b0a5a3aa5c453e48f22ba,- patches.fixes/megaraid_sas-fix-permissions-on-poll_mode_io:   megaraid_sas: Fix permissions on poll_mode_io (bnc#557180   CVE-2009-3939).
+1,kernel-source,5ae4c0c43f3fc689b40bf8861de26a725b04a98e,"- patches.fixes/mac80211-fix-spurious-delba-handling.patch:   mac80211: fix spurious delBA handling (bnc#558267,   CVE-2009-4026, CVE-2009-4027)."
+1,kernel-source,a887d0b9c0dc4aed436708316b6851a8e77d0aa7,- Update to 2.6.27.12-rc1:   - security fixes   - fixes CVE-2009-0029   - bug fixes all over the place.   - obsoletes the following patches:     - patches.arch/ppc-cmm_no_kdump.patch     - patches.drivers/alsa-caiaq-midi-oops-fix     - patches.drivers/alsa-hda-hp-6730b-quirk     - patches.drivers/ibmvfc-host_init_delay.patch     - patches.drivers/ibmvfc-improve_sync_events.patch     - patches.fixes/PCI-Suspend-and-resume-PCI-Express-ports-with-interrupts-disabled.patch     - patches.fixes/PCI-handle-PCI-state-saving-with-interrupts-disabled.patch     - patches.fixes/fs-symlink-write_begin-allocation-context-fix.patch     - patches.fixes/mm-lockless-pagecache-barrier.patch     - patches.fixes/pci-rework-suspend-of-devices-with-no-drivers.patch     - patches.fixes/uv-remove-erroneous-BAU-init - Update config files.
+1,kernel-source,0dd6b14ac777a3acf7f10c9b94e7a11d4c4fae34,- patches.fixes/atm-duplicate-listen-on-socket-corrupts-the-vcc-table.patch:   ATM: duplicate listen() on socket corrupts the vcc table   (CVE-2008-5079).
+1,kernel-source,b2f288012dd377dfde8d6c153924c17211f52587,- patches.fixes/af_unix-soft-lockup-fix.patch: net: Fix soft   lockups/OOM issues w/ unix garbage collector (bnc#449739   CVE-2008-5300).
+1,kernel-source,1c5a538523792e715babdb853a97610c340ceccf,- patches.fixes/fix-inotify-watch-removal-umount-races: Fix   inotify watch removal/umount races (bnc#446973 CVE-2008-5182).
+1,kernel-source,7e2664257ac800e555126dab9eb70d72af6760bd,- update to 2.6.27.3   - lots of bugfixes   - CVE-2008-3831 fix
+1,kernel-source,5c79552a01fe1c685a1aa8b0bbc29b07f596b59e,- patches.fixes/ext2-avoid-printk-flood-with-dir-corruption:   ext2: Avoid printk floods in the face of directory corruption   (bnc#427244 CVE-2008-3528). - patches.fixes/ext3-avoid-printk-flood-with-dir-corruption:   ext3: Avoid printk floods in the face of directory corruption   (bnc#427244 CVE-2008-3528).
+1,kernel-source,3aabaf02d4c1087e1281cb15a44505b15951eb12,- Update to 2.6.25.5.   - fixes CVE-2008-1673
+1,kernel-source,446d2b909f29d6a32017c9821579c2203cb74345,- patches.kernel.org/patch-2.6.25.1-2: Linux 2.6.25.2.  - fixes CVE-2008-1669
+1,kernel-source,c836550cf2cfd30ea2c277176461caaed983c023,- update to 2.6.25.1:   - fixes CVE-2008-1375 and CVE-2008-1675   - lots of other minor bugfixes
+1,kernel-source,9273b16118a0ca5b0a47592fcfde5624802dc5c9,"- Update to 2.6.24.1   - fixes CVE-2008-0007, CVE-2008-0009, CVE-2008-0010   - lots of USB device ids updated   - lots of other bugfixes   - removed patches.fixes/bootstrap-memoryless-node.patch as it is now     contained within."
+1,kernel-source,313a4b89435e03a8f68615854dae4d6b247285cf,"- patches.xen/handle-bogus-cs-selector-in-single-step-instruction-decoding:   Handle bogus %cs selector in single-step instruction decoding   (326270, CVE-2007-3731)."
+1,kernel-source,cf2c85d2a3bd02f6b3a4b55df129a468085ba0c4,"- patches.fixes/i386-fixup-TRACE_IRQ-breakage: i386: fixup   TRACE_IRQ breakage (326270, CVE-2007-3731). - patches.fixes/handle-bogus-%cs-selector-in-single-step-instruction-decoding:   Handle bogus %cs selector in single-step instruction decoding   (326270, CVE-2007-3731)."
+1,kernel-source,e1b909753c0ff877c7865c897fa54ecb3bed3270,- Update to 2.6.22.8   - fixes CVE-2007-4571
+1,kernel-source,8549944af57bed6a80bf28bb8c76fd449a953a59,- Update to 2.6.22.7:   - fixes CVE-2007-4573
+1,kernel-source,fa19b60336310098eac43e2f6acf397f5a687f3b,- Update to 2.6.22.4   - fixes CVE-2007-3848
+1,kernel-source,abe05baeba52fbffb5ec5706a3c616ebd8e1f080,"- updated to 2.6.22.2  - lots of bugfixes and also CVE-2007-3851  - removed the following patches, as they are now obsolete as they are    rolled into the 2.6.22.2 release: 	- patches.fixes/dm-raid1-fix-status.patch: Delete. 	- patches.fixes/dm-io-fix-panic-on-large-request.patch: Delete. 	- patches.fixes/dm-snapshot-permit-invalid-activation.patch: 	- patches.fixes/dm-disable-barriers.patch: Delete. - Update config files."
+1,kernel-source,b50a12598e7defd82357f9bdcd25913b325c5de1,"- patches.fixes/ipv6-fix-null-pointer-hole: fix a possible memory leak   (CVE-2007-1000, #252485)"
+1,kernel-source,5fd03e63a1bb706615da289a4fc4c6922e22a205,- Update to 2.6.18.4   - security fix (CVE-2006-5751)
+1,kernel-source,0af5afab4b07049d558243ce25b76ac0ac8719f3,"- Update to 2.6.18.3   - fixes a number of minor things.   - a few security fixes too, (CVE-2005-4352) is one."
+1,kernel-source,ce8a32c0fa554ab3db6a23128734ed665399930d,- patches.fixes/fix-prctl-privilege-escalation-and-suid_dumpable.patch:   fix prctl privilege escalation and suid_dumpable (CVE-2006-2451)   (186980).
+1,kernel-source,b3cb0237466b95034e86fa5d1f6e7c63bf333755,- Update to 2.6.16.19:   -  NETFILTER: Fix small information leak in SO_ORIGINAL_DST (CVE-2006-1343)
+1,kernel-source,5cb47e73ae861062fa3df41e7a63dafa8deb6fc6,"- Update to 2.6.16.18 (lots of bugfixes and security updates, public and non-public ones)   - fs/compat.c: fix 'if (a |= b )' typo   - smbus unhiding kills thermal management   - PCI quirk: VIA IRQ fixup should only run for VIA southbridges   - VIA quirk fixup, additional PCI IDs   - Netfilter: do_add_counters race, possible oops or info leak (CVE-2006-0039)   - Remove cond_resched in gather_stats()   - page migration: Fix fallback behavior for dirty pages   - via-rhine: zero pad short packets on Rhine I ethernet cards   - Fix udev device creation   - smbfs: Fix slab corruption in samba error path   - scx200_acb: Fix resource name use after free   - limit request_fn recursion   - TG3: ethtool always report port is TP.   - PCI: correctly allocate return buffers for osc calls   - add migratepage address space op to shmem   - Fix ptrace_attach()/ptrace_traceme()/de_thread() race   - ptrace_attach: fix possible deadlock schenario with irqs   - md: Avoid oops when attempting to fix read errors on raid10   - NETFILTER: SNMP NAT: fix memory corruption (CVE-2006-2444)   - USB: ub oops in block_uevent   - selinux: check for failed kmalloc in security_sid_to_context()   - fs/locks.c: Fix sys_flock() race   - SCTP: Respect the real chunk length when walking parameters (CVE-2006-1858)   - SCTP: Validate the parameter length in HB-ACK chunk (CVE-2006-1857)"
+1,kernel-source,fbe6c0d4e7899bef48a3b85530974de47b3ff1f1,- Update to 2.6.16.16:   - fs/locks.c: Fix lease_init (CVE-2006-1860)
+1,kernel-source,a7b41508fb08e97ba1ffa89492416b48c3c07d56,- Update to 2.6.16.15:   - SCTP: Allow spillover of receive buffer to avoid deadlock. (CVE-2006-2275)   - SCTP: Fix panic's when receiving fragmented SCTP control chunks. (CVE-2006-2272)   - SCTP: Fix state table entries for chunks received in CLOSED state. (CVE-2006-2271)   - SCTP: Prevent possible infinite recursion with multiple bundled DATA. (CVE-2006-2274)
+1,kernel-source,0e7d47a851bcff53f17cc12281ded6e42a215caa,- Update to 2.6.16.14:   - smbfs chroot issue (CVE-2006-1864)
+1,kernel-source,c210de1a98663dbe5ccfbae3b349e36fac07ab71,- Update to 2.6.16.13   - NETFILTER: SCTP conntrack: fix infinite loop (CVE-2006-1527)
+1,kernel-source,3f276209080f439873f30fdb74b05d11f373064f,- patches.arch/x86_64-execve-cleanup: Clean up execve path   (for next patch) (156580). - patches.arch/x86_64-force-iret: When user could have changed   RIP always force IRET [CVE-2006-0744] (156580).
+1,kernel-source,e5601d4d996d9bc47f1aff82856216da8a66dc96,- patches.fixes/sysfs-off-by-one.patch: sysfs: zero terminate   sysfs write buffers (CVE-2006-1055).
+1,kernel-source,3d5f379155307f5a15919cc41ed39a29edeedf10,+- update to 2.6.16.1 +  dm: bio split bvec fix +  TCP: Do not use inet->id of global tcp_socket when sending RST (CVE-2006-1242) +  Fix speedstep-smi assembly bug in speedstep_smi_ownership +  DMI: fix DMI onboard device discovery +  fix scheduler deadlock +  i810fb_cursor(): use GFP_ATOMIC +  NET: Ensure device name passed to SO_BINDTODEVICE is NULL terminated. +  V4L/DVB (3324): Fix Samsung tuner frequency ranges +  sata_mv: fix irq port status usage +  rtc.h broke strace(1) builds +  v9fs: assign dentry ops to negative dentries +  2.6.xx: sata_mv: another critical fix +  Kconfig: VIDEO_DECODER must select FW_LOADER +  XFS writeout fix +  proc: fix duplicate line in /proc/devices +  cciss: fix use-after-free in cciss_init_one
+1,kernel-source,4cf5200234d392671273632586073c7ede068f01,- patches.fixes/nfs-revalidate-race: Nfs: Avoid races between   writebacks and truncation (144058). - UPDATE - patches.fixes/nfs-direct-io-vul: Normal user can panic NFS   client with direct I/O (CVE-2006-0555) (151056).
+1,kernel-source,fe7039488ce153a8b2678547c54a70779745364d,+- update to 2.6.14.1 +  CVE-2005-2709 sysctl unregistration oops
+1,bitcoin,fa2ea37940edb407a0fed547bbb93d753240263a,Merge #13479: contrib: Fix CVE-2018-12356 by hardening the regex
+1,bitcoin,9e2e5626dabb7208dafedcc9904940b666be1c3b,Fix CVE-2018-12356 by hardening the regex.
+1,solaris-userland,0639759736ae6f3530df12905ba1b0f923808d10,"PSARC/2016/225 OpenLDAP Update to 2.4.44 22159934 Update OpenLDAP 2.4.30 to OpenLDAP 2.4.44 15793387 Does slapd really belong in pkg:/library/openldap? 15811938 libldap_r-2.4.so.2.8.3`ldap_parse_sasl_bind_result+0x18d memory leaks 17937475 CVE-2013-4449: openldap: segfault on certain queries with rwm overlay 21837740 problem in SERVICE/OPENLDAP 21645415 OpenLDAP core dumps if listener-threads is set to 2 19597840 libldap_r-2.4.so.2.8.3`ldap_new_connection+0x192 causes SIGSEGV 20866611 TLS_PROTOCOL_MIN functional but undocumented in ldap.conf(5oldap) 21614972 ldapmodify doesn't operate as expected due to solaris renaming 21247153 openldap account should be password=NP not default to locked 21232554 binary is named openldapsearch, man page is ldapsearch 21630074 openldap calling fopen() without F 15826440 svc:/network/ldap/server:openldap_24 needs properties for slapd options 21607640 openldap server needs to support ldaps by default 18230501 OpenLDAP should ship with lint libraries 21772464 svc:/network/ldap/server:openldap_24 needs management authorizations 22959761 Need to set proper privileges in the method_credential in OpenLDAP manifest 23057730 pkg mediator should be used for OpenLDAP installation"
+1,solaris-userland,7320e474acb0d04c94510cec8c73fe08b15c8d1f,21272559 curl versions before 7.43.0 may be vulnerable to CVE-2015-3236 & CVE-2015-3237
+1,solaris-userland,9bddb9be8b0704baebdaa8cb89d7575370beff48,17658177 problem in SERVICE/QUAGGA 17658165 mitigate CVE-2013-0149 in quagga
+1,solaris-userland,c893902d340f20297c233919f24de025c9727923,16552152 ibdiagnet /tmp clobbering vulnerability [CVE-2013-2561]
+1,solaris-userland,31fc550789da4aac25887253ef4bb4ff58d92cbf,16263409 CVE-2013-0249 libcurl SASL buffer overflow
+1,solaris-userland,06f455e56adfb9c2f7d5cf2cc63a8fb543b52797,"15825143 SUNBT7206540 Upgrade libxml2 to version 2.9.0 15769048 SUNBT7133962 xml schema validation fails on valid docs 15808846 SUNBT7190042 CVE-2012-2807 libxml2 (64-bit): Multiple integer overflows, leading"
+1,solaris-userland,ff2bf88fcc29d747e382ffe8072670fcdbd1661b,7008450 CVE-2009-1720 CVE-2009-1721 upgrade openexr 7027802 Ilmbase and OpenEXR should move to Userland
+1,solaris-userland,d27a381c7d63db6afe3761c055284dfb9f6260c5,7008376 CVE-2009-3546 Upgrade GD 7025797 libgd should move to userland
+1,solaris-userland,b9383d9e5c6588f861458a7dde224e3e8294e200,7008670 CVE-2010-2252 wget problems with 3xx redirection
+1,ImageMagick,f083093a79e61a9bbe541b62a7b1694ec8199f98,Mention CVE-2017-12676 in ChangeLog
+1,ImageMagick,7c6b9084a12a181d8fb7797586876760c060f126,Ref CVE-2017-13141 for Issue 600
+1,ImageMagick,5e99a980d5ed82ee829e3b9ae9b11354d2eb07e2,Mention CVE-2017-11750 in ChangeLog
+1,ImageMagick,0b63cb21ffa525e0b12a00ea6797092917e93902,Mention CVE-2017-11522 in ChangeLog
+1,ImageMagick,7693a6ecfdc2481e4a61e0d3b3fd116e64f7bcb1,Mention CVE-2017-11539 in ChangeLog
+1,ImageMagick,6ede96436d442227bc02c7a91f8d16b8e19e1f79,ChangeLog: Mention CVE-2017-11310 in the entry for 22 June 2017.
+1,lucene-solr,d09c76518a1f72626a189957d8d4d8c6dab68d3c,SOLR-12204: Upgrade commons-fileupload dependency to 1.3.3 to address CVE-2016-1000031
+1,lucene-solr,3530397f1777332872eac2760f9aa0e2ae1d7450,SOLR-11971: Add CVE number: CVE-2018-1308
+1,lucene-solr,084d39ce1962ffe5816117da85c1903443503a57,"LUCENE-5072: Automatically patch javadocs generated by JDK versions before 7u25 to work around the frame injection vulnerability (CVE-2013-1571, VU#225657)"
+1,symfony,0f7667d6430eb6529d84a29d7aa83991d1ac4fd0,security #cve-2018-14774 [HttpKernel] fix trusted headers management in HttpCache and InlineFragmentRenderer (nicolas-grekas)
+1,symfony,6604978f8355e1e7c2d1d5584107eee3e10cdbfe,security #cve-2018-14773 [HttpFoundation] Remove support for legacy and risky HTTP headers (nicolas-grekas)
+1,symfony,b20e83562e32c56f8d9b8296ab07b0e4c0a54db8,security #cve-2018-11408 [SecurityBundle] Fail if security.http_utils cannot be configured
+1,symfony,319e1bdd43979d9c1559497de8d69adea28ab8d1,security #cve-2018-11406 clear CSRF tokens when the user is logged out
+1,symfony,194caff28b56707ea98e746c6582c06acbb9bc3f,security #cve-2018-11385 migrating session for UsernamePasswordJsonAuthenticationListener
+1,symfony,b5fef05c1b2ba3d98b2856704829e16a2413e325,security #cve-2018-11385 migrating session for UsernamePasswordJsonAuthenticationListener
+1,symfony,fad1e1f2ea336e85c889feece9d0e23fbfcf777d,security #cve-2018-11385 Adding session authentication strategy to Guard to avoid session fixation
+1,symfony,fa5bf4b17d45ee32f41bd1a9abc3fb6c134ec89b,security #cve-2018-11385 Adding session strategy to ALL listeners to avoid *any* possible fixation
+1,symfony,47e72683c648c9c79b81635e0a3e43d13ed3f5cf,security #cve-2018-11386 [HttpFoundation] Break infinite loop in PdoSessionHandler when MySQL is in loose mode
+1,symfony,06fc97ead8e8c9b673515723473c07bdf27b5ed3,feature #11367 [HttpFoundation] Fix to prevent magic bytes injection in JSONP responses... (CVE-2014-4671) (Andrew Moore)
+1,symfony,6af3d05b851161a42d29b1c032f30611c0b873ce,[HttpFoundation] Fix to prevent magic bytes injection in JSONP responses (Prevents CVE-2014-4671)
+1,capsicum-linux,d9092f52d7e61dd1557f2db2400ddb430e85937e,kvm: x86: Check memopp before dereference (CVE-2016-8630)
+1,capsicum-linux,63ea0a49ae0b145b91ff2b070c01b66fc75854b9,KVM: x86: Fix of previously incomplete fix for CVE-2014-8480
+1,capsicum-linux,ce9d7f7b45930ed16c512aabcfe651d44f1c8619,Merge branch 'CVE-2014-7970' of git://git.kernel.org/pub/scm/linux/kernel/git/luto/linux
+1,capsicum-linux,0ef3a56b1c466629cd0bf482b09c7b0e5a085bb5,Merge branch 'CVE-2014-7975' of git://git.kernel.org/pub/scm/linux/kernel/git/luto/linux
+1,capsicum-linux,350b8bdd689cd2ab2c67c8a86a0be86cfa0751a7,kvm: iommu: fix the third parameter of kvm_iommu_put_pages (CVE-2014-3601)
+1,capsicum-linux,554086d85e71f30abe46fc014fea31929a7c6a8a,"x86_32, entry: Do syscall exit work on badsys (CVE-2014-4508)"
+1,capsicum-linux,5678de3f15010b9022ee45673f33bcfc71d47b60,KVM: ioapic: fix assignment of ioapic->rtc_status.pending_eoi (CVE-2014-0155)
+1,capsicum-linux,a08d3b3b99efd509133946056531cdf8f3a0c09b,kvm: x86: fix emulator buffer overflow (CVE-2014-0049)
+1,capsicum-linux,17d68b763f09a9ce824ae23eb62c9efc57b69271,KVM: x86: fix guest-initiated crash with x2apic (CVE-2013-6376)
+1,capsicum-linux,fda4e2e85589191b123d31cdc21fd33ee70f50fd,KVM: x86: Convert vapic synchronization to _cached functions (CVE-2013-6368)
+1,capsicum-linux,b963a22e6d1a266a67e9eecc88134713fd54775c,KVM: x86: Fix potential divide by 0 in lapic (CVE-2013-6367)
+1,capsicum-linux,338c7dbadd2671189cec7faf64c84d01071b3f96,KVM: Improve create VCPU parameter (CVE-2013-4587)
+1,capsicum-linux,47ab1a2de42031021965b81cbab4f3b4c5696d07,Merge branch 'for-3.11/CVE-2013-2888' into for-3.12/upstream
+1,capsicum-linux,a2c118bfab8bc6b8bb213abfc35201e441693d55,KVM: Fix bounds checking in ioapic indirect register reads (CVE-2013-1798)
+1,capsicum-linux,0b79459b482e85cb7426aa7da683a9f2c97aeae1,KVM: x86: Convert MSR_KVM_SYSTEM_TIME to use gfn_to_hva_cache functions (CVE-2013-1797)
+1,capsicum-linux,c300aa64ddf57d9c5d9c898a64b36877345dd4a9,KVM: x86: fix for buffer overflow in handling of MSR_KVM_SYSTEM_TIME (CVE-2013-1796)
+1,capsicum-linux,6d1068b3a98519247d8ba4ec85cd40ac136dbdf9,KVM: x86: invalid opcode oops on SET_SREGS with OSXSAVE bit set (CVE-2012-4461)
+1,capsicum-linux,e0e3cea46d31d23dc40df0a49a7a2c04fe8edfea,af_netlink: force credentials passing [CVE-2012-3520]
+1,capsicum-linux,313d7b003ceceb797e8c0d18ab085ed0638b4aff,blkback: Fix CVE-2010-3699
+1,capsicum-linux,1362fa078dae16776cd439791c6605b224ea6171,DNS: Fix a NULL pointer deref when trying to read an error key [CVE-2011-1076]
+1,capsicum-linux,a27e13d370415add3487949c60810e36069a23a6,econet: fix CVE-2010-3848
+1,capsicum-linux,16c41745c7b92a243d0874f534c1655196c64b74,econet: fix CVE-2010-3850
+1,capsicum-linux,fa0e846494792e722d817b9d3d625a4ef4896c96,"econet: disallow NULL remote addr for sendmsg(), fixes CVE-2010-3849"
+1,capsicum-linux,5fa782c2f5ef6c2e4f04d3e228412c9b4a4c8809,sctp: Fix skb_over_panic resulting from multiple invalid parameter errors (CVE-2010-1173) (v4)
+1,capsicum-linux,c0cd884af045338476b8e69a61fceb3f34ff22f1,r8169: offical fix for CVE-2009-4537 (overlength frame DMAs)
+1,capsicum-linux,690e744869f3262855b83b4fb59199cf142765b0,[SCSI] gdth: Prevent negative offsets in ioctl CVE-2009-3080
+1,capsicum-linux,dbda6ac0897603f6c6dfadbbc37f9882177ec7ac,MIPS: CVE-2009-0029: Enable syscall wrappers.
+1,capsicum-linux,67605d6812691bbd2158d2f60259e0407611bc1b,[CVE-2009-0029] sparc: Enable syscall wrappers for 64-bit
+1,capsicum-linux,26689452f5ca201add63b1b1ff0dbcf82d6885e7,[CVE-2009-0029] s390 specific system call wrappers
+1,capsicum-linux,2b66421995d2e93c9d1a0111acf2581f8529c6e5,[CVE-2009-0029] System call wrappers part 33
+1,capsicum-linux,d4e82042c4cfa87a7d51710b71f568fe80132551,[CVE-2009-0029] System call wrappers part 32
+1,capsicum-linux,836f92adf121f806e9beb5b6b88bd5c9c4ea3f24,[CVE-2009-0029] System call wrappers part 31
+1,capsicum-linux,6559eed8ca7db0531a207cd80be5e28cd6f213c5,[CVE-2009-0029] System call wrappers part 30
+1,capsicum-linux,2e4d0924eb0c403ce4014fa139d1d61bf2c44fee,[CVE-2009-0029] System call wrappers part 29
+1,capsicum-linux,938bb9f5e840eddbf54e4f62f6c5ba9b3ae12c9d,[CVE-2009-0029] System call wrappers part 28
+1,capsicum-linux,1e7bfb2134dfec37ce04fb3a4ca89299e892d10c,[CVE-2009-0029] System call wrappers part 27
+1,capsicum-linux,c4ea37c26a691ad0b7e86aa5884aab27830e95c9,[CVE-2009-0029] System call wrappers part 26
+1,capsicum-linux,d5460c9974a321a194aded4a8c4daaac68ea8171,[CVE-2009-0029] System call wrappers part 25
+1,capsicum-linux,e48fbb699f82ef1e80bd7126046394d2dc9ca7e6,[CVE-2009-0029] System call wrappers part 24
+1,capsicum-linux,5a8a82b1d306a325d899b67715618413657efda4,[CVE-2009-0029] System call wrappers part 23
+1,capsicum-linux,3e0fa65f8ba4fd24b3dcfaf14d5b15eaab0fdc61,[CVE-2009-0029] System call wrappers part 22
+1,capsicum-linux,20f37034fb966a1c35894f9fe529fda0b6440101,[CVE-2009-0029] System call wrappers part 21
+1,capsicum-linux,3cdad42884bbd95d5aa01297e8236ea1bad70053,[CVE-2009-0029] System call wrappers part 20
+1,capsicum-linux,003d7ab479168132a2b2c6700fe682b08f08ab0c,[CVE-2009-0029] System call wrappers part 19
+1,capsicum-linux,a6b42e83f249aad723589b2bdf6d1dfb2b0997c8,[CVE-2009-0029] System call wrappers part 18
+1,capsicum-linux,ca013e945b1ba5828b151ee646946f1297b67a4c,[CVE-2009-0029] System call wrappers part 17
+1,capsicum-linux,002c8976ee537724b20a5e179d9b349309438836,[CVE-2009-0029] System call wrappers part 16
+1,capsicum-linux,a26eab2400f0477bfac0255600552394855016f7,[CVE-2009-0029] System call wrappers part 15
+1,capsicum-linux,3480b25743cb7404928d57efeaa3d085708b04c2,[CVE-2009-0029] System call wrappers part 14
+1,capsicum-linux,6a6160a7b5c27b3c38651baef92a14fa7072b3c1,[CVE-2009-0029] System call wrappers part 13
+1,capsicum-linux,64fd1de3d821659ac0a3004fd5ee1de59e64af30,[CVE-2009-0029] System call wrappers part 12
+1,capsicum-linux,257ac264d69017270fbc3cf5536953525db4076c,[CVE-2009-0029] System call wrappers part 11
+1,capsicum-linux,bdc480e3bef6eb0e7071770834cbdda7e30a5436,[CVE-2009-0029] System call wrappers part 10
+1,capsicum-linux,a5f8fa9e9ba5ef3305e147f41ad6e1e84ac1f0bd,[CVE-2009-0029] System call wrappers part 09
+1,capsicum-linux,17da2bd90abf428523de0fb98f7075e00e3ed42e,[CVE-2009-0029] System call wrappers part 08
+1,capsicum-linux,754fe8d297bfae7b77f7ce866e2fb0c5fb186506,[CVE-2009-0029] System call wrappers part 07
+1,capsicum-linux,5add95d4f7cf08f6f62510f19576992912387501,[CVE-2009-0029] System call wrappers part 06
+1,capsicum-linux,362e9c07c7220c0a78c88826fc0d2bf7e4a4bb68,[CVE-2009-0029] System call wrappers part 05
+1,capsicum-linux,b290ebe2c46d01b742b948ce03f09e8a3efb9a92,[CVE-2009-0029] System call wrappers part 04
+1,capsicum-linux,ae1251ab785f6da87219df8352ffdac68bba23e4,[CVE-2009-0029] System call wrappers part 03
+1,capsicum-linux,dbf040d9d1cbf1ef6250bdb095c5c118950bcde8,[CVE-2009-0029] System call wrappers part 02
+1,capsicum-linux,58fd3aa288939d3097fa04505b25c2f5e6e144d1,[CVE-2009-0029] System call wrappers part 01
+1,capsicum-linux,6673e0c3fbeaed2cd08e2fd4a4aa97382d6fedb0,[CVE-2009-0029] System call wrapper special cases
+1,capsicum-linux,ed6bb6194350dc6ae97a65dbf2d621a3dbe6bbe9,[CVE-2009-0029] s390: enable system call wrappers
+1,capsicum-linux,ee6a093222549ac0c72cfd296c69fa5e7d6daa34,[CVE-2009-0029] powerpc: Enable syscall wrappers for 64-bit
+1,capsicum-linux,1a94bc34768e463a93cb3751819709ab0ea80a01,[CVE-2009-0029] System call wrapper infrastructure
+1,capsicum-linux,f627a741d24f12955fa2d9f8831c3b12860635bd,[CVE-2009-0029] Make sys_syslog a conditional system call
+1,capsicum-linux,c9da9f2129d6a421c32e334a83770a9e67f7feac,[CVE-2009-0029] Make sys_pselect7 static
+1,capsicum-linux,1134723e96f6e2abcf8bfd7a2d1c96fcc323ef35,[CVE-2009-0029] Remove __attribute__((weak)) from sys_pipe/sys_pipe2
+1,capsicum-linux,e55380edf68796d75bf41391a781c68ee678587d,[CVE-2009-0029] Rename old_readdir to sys_old_readdir
+1,capsicum-linux,2ed7c03ec17779afb4fcfa3b8c61df61bd4879ba,[CVE-2009-0029] Convert all system calls to return a long
+1,capsicum-linux,4c696ba7982501d43dea11dbbaabd2aa8a19cc42,[CVE-2009-0029] Move compat system call declarations to compat header file
+1,capsicum-linux,17b24b3c97498935a2ef9777370b1151dfed3f6f,ATM: CVE-2008-5079: duplicate listen() on socket corrupts the vcc table
+1,capsicum-linux,01a1a3cc1e3fbe718bd06a2a5d4d1a2d0fb4d7d9,V4L/DVB (9624): CVE-2008-5033: fix OOPS on tvaudio when controlling bass/treble
+1,capsicum-linux,4b40893918203ee1a1f6a114316c2a19c072e9bd,drm/i915: fix ioremap of a user address for non-root (CVE-2008-3831)
+1,capsicum-linux,3d6e48f43340343d97839eadb1ab7b6a3ea98797,[S390] CVE-2008-1514: prevent ptrace padding area read/write in 31-bit mode
+1,capsicum-linux,5a021e9ffd56c22700133ebc37d607f95be8f7bd,random: fix bound check ordering (CVE-2007-3105)
+1,capsicum-linux,99d24edeb6abc6ca3a0d0fbdb83c664c04403c8c,"[NETFILTER]: {ip, nf}_conntrack_sctp: fix remotely triggerable NULL ptr dereference (CVE-2007-2876)"
+1,capsicum-linux,059819a41d4331316dd8ddcf977a24ab338f4300,[PATCH] Fix buffer overflow in Omnikey CardMan 4040 driver (CVE-2007-0005)
+1,capsicum-linux,00a2b0f6dd2372842df73de72d51621b539fea44,Fix possible UDF deadlock and memory corruption (CVE-2006-4145)
+1,capsicum-linux,c164a9ba0a8870c5c9d353f63085319931d69f23,Fix sctp privilege elevation (CVE-2006-3745)
+1,capsicum-linux,abf75a5033d4da7b8a7e92321d74021d1fcfb502,[PATCH] Fix prctl privilege escalation and suid_dumpable (CVE-2006-2451)
+1,capsicum-linux,6c813c3fe9e30fcf3c4d94d2ba24108babd745b0,[NETFILTER]: Fix small information leak in SO_ORIGINAL_DST (CVE-2006-1343)
+1,capsicum-linux,2c8ac66bb2ff89e759f0d632a27cc64205e9ddd9,"[NETFILTER]: Fix do_add_counters race, possible oops or info leak (CVE-2006-0039)"
+1,capsicum-linux,3b7c8108273bed41a2fc04533cc9f2026ff38c8e,[PATCH] smbfs chroot issue (CVE-2006-1864)
+1,capsicum-linux,b78b6af66a5fbaf17d7e6bfc32384df5e34408c8,[PATCH] shmat: stop mprotect from giving write permission to a readonly attachment (CVE-2006-1524)
+1,capsicum-linux,330d57fb98a916fa8e1363846540dd420e99499a,[PATCH] Fix sysctl unregistration oops (CVE-2005-2709)
+1,commons-fileupload,20ee08b9948303afa490a20031668fc039c7b4c5,Add pointer to CVE-2016-3092 to changes entry of release 1.3.2
+1,commons-fileupload,7b6f879c46a9a969518d7129c70378e3b7de5af1,Added information related to CVE-2016-3092.
+1,commons-fileupload,a092f186f4fe482517858f1fc954cf787c88703d,Added information related to CVE-2016-3092.
+1,commons-fileupload,774ef160d591b579f703c694002e080f99bcd28b,Fix a performance issue with large boundaries leading to a Denial of Service (CVE-2016-3092)
+1,commons-fileupload,c61ff05b3241cb14d989b67209e57aa71540417a,Fix CVE-2014-0050. Specially crafted input can trigger a DoS if the buffer used by the <code>MultipartStream</code> is not big enough. When constructing <code>MultipartStream</code> enforce the requirements for buffer size by throwing an <code>IllegalArgumentException</code> if the requested buffer size is too small. This prevents the DoS.
+1,commons-fileupload,f874563307c1159ac634df67509d9859bca6ddb9,"Make clear that a secure configuration with local, untrusted users requires that a repository is configured. This is CVE-2013-0248"
+1,wicket,7cd01f71cbf3688c22b095dfd9bab2fae5db3c39,WICKET-5502 Patch FileUploadBase to fix CVE-2014-0050
+1,mongo,558a019e51175b874de11f96c276f6be633fea91,SERVER-17252: CVE-2014-8964: Fix zero-repeat assertion condition bug.
+1,mongo,bdee10aed8691579d17300a1235edce8742ef6dd,"SERVER-15673 Disable SSLv3 ciphers (CVE-2014-3566 POODLE"")"""
+1,fineract,8c60476bd1445674072b54cef9c4c1e91c3feaa1,CVE-2018-1290-1291-1292
+1,fineract,1d38bd25d0b90e6260b9d24d37d77bc50055b8bb,fixes for CVE-2018-1289
+1,truffleruby,ed7b53ad12673f7fc9199dd5184b9fd4045f6c10,Run the test for CVE-2017-10784
+1,truffleruby,5e33e08fe4e2154513901ab880e64b2bcdf3f7cc,Document and enable tests for CVE-2017-17405
+1,truffleruby,fa497fd2a8779a2ec4c89ac23dc18714dceeae60,Write a spec for CVE-2010-1330
+1,truffleruby,d142520e9b5a61da41eca55f0fbe0cd7cc3e9668,CVE-2010-1330 is a JCodings vulnerability
+1,truffleruby,5a3277a20ce1c556251d1e37b713dba34b7fce21,Document CVE-2018-6914
+1,truffleruby,e9494d5bce8d781163c7915098bf4fab07fc3eab,Document and mitigate CVE-2018-8779
+1,truffleruby,90933a1675fc29514f3397a0d8e8c798c4224921,Document CVE-2018-8780
+1,truffleruby,e31611e5fe1a83e8c033a881dd189b4cc1a6f238,Document CVE-2018-8777
+1,truffleruby,bb81b02aeaaee11a4bc0d970d4c75a5c54cc5665,Document CVE-2017-17742
+1,truffleruby,ae034fbe108e4d8fb03ea0e7039f8ef84274a25b,Document and mitigate CVE-2018-8778
+1,truffleruby,f4f2a99d90ec1f05bd2514ea2e6ac15334da9250,Update rubygems to 2.4.8 to mitigate CVE-2015-4020
+1,truffleruby,b1cf61624d7e8cd07002b792391d90c584a47834,Update rubygems to 2.4.8 to mitigate CVE-2015-4020
+1,truffleruby,1808b2450804ee973440972a383bc9d01e388084,JRUBY-5007: import an upstream security fix of WEBrick (CVE-2010-0541)
+1,nginx,3e3ee60b99f41cdc15f3651f0a917217977157c1,remove SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG becuase of CVE-2010-4180
+1,nginx,70bd187c4c386d82d6e4d180e0db84f361d1be02,disable SSL renegotiation (CVE-2009-3555)
+1,curl,5d7952f52e410e1d4a8ff1965e5cc6fc1bde86aa,url: fix buffer overwrite with file protocol (CVE-2017-9502)
+1,curl,042cc1f69ec0878f542667cb684378869f859911,- David Kierznowski notified us about a security flaw   (http://curl.haxx.se/docs/adv_20090303.html also known as CVE-2009-0037) in   which previous libcurl versions (by design) can be tricked to access an   arbitrary local/different file instead of a remote one when   CURLOPT_FOLLOWLOCATION is enabled. This flaw is now fixed in this release   together this the addition of two new setopt options for controlling this   new behavior:
+1,FFmpeg,2d1c0dea5f6b91bec7f5fa53ec050913d851e366,dv: Fix small stack overread related to CVE-2011-3929 and CVE-2011-3936.
+1,FFmpeg,6fcf2bb8af0e7d6bb179e71e67e5fab8ef0d2ec2,vorbis: Fix last quarter of CVE-2011-3893
+1,FFmpeg,6e73cef6e3b536fbccdb82bd9260440d836b3f03,Fix several security issues in flicvideo.c This fixes CVE-2010-3429
+1,tomcat,4c04369c287233ea2e8e5135f6c31d02e2d76293,Add some comments for the fix for CVE-2018-8037
+1,tomcat,95d19f558e1acaabdd8dffe322eedd93063907e1,Update docs after changes for CVE-2018-8014
+1,tomcat,d83a76732e6804739b81d8b2056365307637b42d,Fix https://bz.apache.org/bugzilla/show_bug.cgi?id=62343 Make CORS filter defaults more secure. This is the fix for CVE-2018-8014.
+1,tomcat,b7e0435d17aba69f16ae9e8a78ad0f1565b552af,Partial fix for CVE-2017-12617 This ensures that a path specified for creation of a file does not end in '/' since that is dropped by the File API.
+1,tomcat,b577f9a7996b92b650b1649af3c3bae11c120db9,"Fix https://bz.apache.org/bugzilla/show_bug.cgi?id=61542 Partial fix for CVE-2017-12617 This moves a check from the Default servlet where it applied to GET, POST, HEAD and OPTIONS to the resources implementation where it applies to any method that expects the resource to exist (e.g.DELETE) Still need to address the case where the resource does not exist (e.g. PUT)"
+1,tomcat,17449ac6178971e285f14da7ffc97b00e9f6bccf,"Now CVE-2017-7675 is public, make the comment more specific"
+1,tomcat,fb3569fbb9a2f55459aa8e1e22bc35a737e66329,"Add a new initialisation parameter, envHttpHeaders, to the CGI Servlet to mitigate httpoxy (CVE-2016-5388) by default and to provide a mechanism that can be used to mitigate any future, similar issues."
+1,tomcat,29384723d8d9645b87e05be9fa369a4deeb78b9c,Fix CVE-2014-0050 DoS with malformed Content-Type header and multipart request processing. Update to latest code (r1565159) from Commons FileUpload
+1,tomcat,150bc791ac3ba40081425dd1c37a053fbb02b339,Expand UTF-8 tests based on a test case written by Joe Orton for CVE-2008-2938 Note the additional failures this generates are not exploitable. They are invalid only because they encode a valid code point in too many bytes.
+1,tomcat,0c5ec5b958f1b59840ee155a23ab409755b039f6,"- Align %2f handling (aka CVE-2007-0450 fix) between implementations of UDecoder.convert(). - Make convert(MessageBytes) to consistently throw an IOException, even if it calls convert(String)."
+1,tomcat,a2538ce78f83b7376c48d12d8247600079d789b1,Fix https://issues.apache.org/bugzilla/show_bug.cgi?id=51698 Fix CVE-2011-3190 Prevent AJP request forgery via unread request body packet
+1,tomcat,b139f0fca0f73b66712c31e83c14facf5c4dc389,Update to daemon 1.0.7 This fixes CVE-2011-2729
+1,tomcat,2e69497fa7b1444632c6dadb64a4a82e18478ee6,"When running under a security manager and using sendfile, validate sendfile attributes to prevent sendfile being used to bypass the security manager. Part of the fix for CVE-2011-2526"
+1,tomcat,1d372c881eafd9ffe729996f8560fd5fe50cd39d,Protect against crashes in the HTTP APR connector if sendfile is configured to send more data than is available in the file. Part of the fix for CVE-2011-2526
+1,tomcat,48dded4ab1209a030770ab67a789d3b2528b6329,"Socket has been closed, return false so an attempt is not made to re-use the socket Part of the fix for CVE-2011-2526"
+1,tomcat,163e03c7eb611570d2f0e93b6fbfe134a541a30f,Correct a comment Part of the fix for CVE-2011-2526
+1,tomcat,ff8789737a0a64c12d68929497f16d8021052048,Protect against infinite loops in the HTTP NIO connector if sendfile is configured to send more data than is available in the file. (markt) Part of the fix for CVE-2011-2526
+1,tomcat,763a56b45999653ce648a18462b8a826809215b1,Fix CVE-2011-2204. Prevent user passwords appearing in log files if a runtime exception (e.g. OOME) occurs while creating a new user for a MemoryUserDatabase via JMX.
+1,tomcat,81bb49ad58fc7b1177a86ba82abf0271d07ceeb7,Fix https://issues.apache.org/bugzilla/show_bug.cgi?id=51395 Better fix for memory leak that aligns ContextConfig with TldConfig Fix part 3 of 3 for CVE-2011-2481
+1,tomcat,279e4451cb996f810fbca2f78b6340412d9daa7b,Revert r1137753 - I have a better soution in mind Fix part 2 of 3 for CVE-2011-2481
+1,tomcat,8fa210147ffd98e8971cba56395726cc4a893ad7,Fix https://issues.apache.org/bugzilla/show_bug.cgi?id=51395 Fix memory leak triggered when an application that includes a SAXParserFactory is the first web application to be loaded. Fix part 1 of 3 for CVE-2011-2481
+1,tomcat,299b26af66793438c323ea6b18462fa44683080f,Use the correct classloader This is the fix for CVE-2011-1582
+1,tomcat,639e20992a66d7a42fb59c974db91c8a0f730a1e,Add additional configuration options to the DIGEST authenticator This is the fix for CVE-2011-1184
+1,tomcat,b7b5c63a932f6c1ea05f9b65ad9054247bb5af57,Fix https://issues.apache.org/bugzilla/show_bug.cgi?id=12428 Add optional support for preemptive authentication on a per context basis Based on a patch suggested by Werner Donn This includes the fix for CVE-2011-1183
+1,tomcat,fd8a579e0e2379a84826b11700adf396e4ed2041,Protect against things going wrong during access logging. An un-handled exception here could trigger some unexpected code paths. Possible contributing factor to https://issues.apache.org/bugzilla/show_bug.cgi?id=50957 ? This is part of the fix for CVE-2011-1475
+1,tomcat,d2e8f2ede7dea39f75f68384f331f38f094e4ed3,Move the processor.recycle calls to just before the point where the processor is returned to the pool. This ensures returned processors are recycled (this could have been skipped on some exception paths) Possible contributing factor to https://issues.apache.org/bugzilla/show_bug.cgi?id=50957 ? This is part of the fix for CVE-2011-1475
+1,tomcat,3e5b0455483eed55752047073e92403bfca8d3ec,CVE-2011-1088 Fix unit test failures
+1,tomcat,0ff4905158b77787a7f3aca55c9dec93456665dc,CVE-2011-1088 Complete the fix for this issue. The optimisation not to configure an authenticator of there were no security constraints meant that in that case @ServletSecurity annotations had no effect. The unit tests did not pick this up since they added an authenticator directly. Add an explicit unit test for this scenario.
+1,tomcat,ece65c1a428094b1c6c17de3d7593f64e1bb1286,CVE-2011-1088 @ServletSecurity Servlets added via addServlet() should not be processed unless created via craeteServlet. Need to delay scanning until urlPatterns are known
+1,tomcat,2d7dbfe4c63a4242a9b28fdb662d91ceb7a84630,CVE-2011-1088 Fix typo
+1,tomcat,5c8560f3054982abaa476d87ec031c439d58d66e,CVE-2011-1088 Start of fix for issue reported on users list that @ServletSecurity annotations were ignored. This fix is not yet complete. This first part: - Triggers the loading of the Wrapper before the constraints are processed to ensure that any @ServletSecurity annotations are taken account of - Makes sure the constraints collection is thread-safe given new usage - Adds scanning for @ServletSecurity when a Servlet is loaded - Ensure there is always an authenticator when using the embedded Tomcat class so that @ServletSecurity will have an effect - Adds a simple unit test to check @ServletSecurity annotations are processed Further commits will add additional test cases and any changes required for those test cases to pass
+1,tomcat,407841c426dc52a4c6b8ccd297df6c484a540056,Improve HTTP specification compliance This works-around the Oracle JVM bug that triggers a DoS. CVE-2010-4476.
+1,tomcat,008447095ce8c3a8f713093d5e618f3f06f94ea8,Fix https://issues.apache.org/bugzilla/show_bug.cgi?id=50631 InternalNioInputBuffer should honor maxHttpHeadSize This addresses CVE-2011-0534
+1,tomcat,b4e9488629bf03b4b65abf335e536e85386d1366,Fix https://issues.apache.org/bugzilla/show_bug.cgi?id=50325 Use JVM provided solutions to CVE-2009-3555 if available (i.e. RFC 5746 support)
+1,tomcat,58223c5ecc0751c3642c810f291b8f033d33b97f,Prevent XSS in Manager application This addresses CVE-2011-0013
+1,tomcat,5971f9392edc6d70808b2599b062b050fcd11d23,Fix CVE-2010-4172. Multiple XSS in Manager web application
+1,tomcat,a697f7b52c4e3aea0c6763b33d413b54a518e883,Ensure work dir attribute is made read-only CVE-2010-3718
+1,tomcat,e4b1187df3cc7a881d76e75920149380cf437a74,Return copies of the URL array rather than the original. This facilitated CVE-2010-1622 although the root cause was in the Spring Framework. Returning a copy in this case seems like a good idea.
+1,tomcat,4e97b367a97a356d2f8bb9986875e20d0807d32c,Add CVE-2010-2227 test case
+1,tomcat,40e5880dfc51517334acda5f12beacdec52ca283,Arrange filter logic. This is the fix for CVE-2010-2227.
+1,tomcat,a4de93b2aaf74fff7c1e194f7ce3d2228a9680b8,Fix CVE-2010-1157. Prevent possible disclosure of host name or IP address via the HTTP WWW-Authenticate header when using BASIC or DIGEST authentication.
+1,tomcat,30af3f5630542a2340781f66553e734a6fd69701,"Improve workaround for CVE-2009-3555 On the plus side, it doesn't rely on an async event to close the connection On the down side, I haven't yet found a way to log client initiated handshakes before they get closed"
+1,tomcat,cb8855a65c580e332681f61a7d6edfa509588bf0,"Fix CVE-2009-3548. When installing using defaults, don't create an administrative user with a blank password Note: This is already public - it was discussed on the users list. The formal announcement will go out shortly. The patch also includes making the Manager and Host-Manager applications separately selectable with the addition of an administrative user only enabled if one of the manager apps is selected"
+1,tomcat,7c50fe16ea70ccf6691fc4d2909efe007fce198d,Fix XSS in examples web application. This is CVE-2009-0781. Security page updates and formal announcement to follow.
+1,tomcat,6b61911f94d6d8d49ee933c5f1882a7e7c336d2c,Remove 3 of the essentially 4 duplicate normalise implementations. Minor tweaks where required to use the new single implementation. Remove unnecessary normalisation calls. This includes the fix for CVE-2008-5515.
+1,tomcat,49c71fc59c1b8f8da77aea9eb53e61db168aebab,Fix potential XSS in host-manager. This is CVE-2008-1947.
+1,tomcat,52a88ae7a48916dac7cfe22d94ff888d7d63312d,Fix CVE-2007-5342. Limit JULI privs to just those required to prevent per web-app configurations having too many privs.
+1,tomcat,901292cf9d7d8225f8a3b96c7583e2bd8b41772d,Fix CVE-2007-5461.
+1,tomcat,a3ba5062e005327edffd06a1677b6fb753807f64,Fix XSS issues in snoop.jsp. This is CVE-2007-2449. Some of these are harder (impossible?) to exploit than others but doing all of them means there won't be another XSS issue to patch later. I also made a similar change for a couple of other JSPs that are in the harder/impossible? to exploit category.
+1,tomcat,1bc3bcb2848f478fd6674487d6dad507fd5dd686,Fix XSS issue in Manager and Host Manager. This is CVE-2007-2450.
+1,ambari,8a740f229b4857efb88acaf6732b3d1bbb561589,AMBARI-24431. Infra Manager / Log Search: Fix Jetty CVE-2018-12536. (#2002)
+1,ambari,2a05a8a10f1c5477bed1f2ca27823f27116df5d6,AMBARI-24422. Log Feeder: upgrade guava version (because of CVE-2018-10237) (#1992)
+1,ambari,145ff84abf6ea04ff6a6a9596573522f81a4afcd,AMBARI-23627. Update Spring dependencies to fix CVE-2018-1270. (mpapirkovskyy) (#1135)
+1,boringssl,7f2ee3522d90c61df2125e496fa1e9b549255d1e,bn/asm/x86_64-mont.pl: fix for CVE-2016-7055 (not affected).
+1,boringssl,e701f16bd69b6f251ed537e40364c281e85a63b2,bn/asm/x86_64-mont5.pl: fix carry propagating bug (CVE-2015-3193).
+1,boringssl,3c9746a6d7ccff7d206d110feebba474aaa20f05,Regression test for CVE-2015-0291.
+1,boringssl,a83cc803b118d5ac675e021bc219397560423764,Fix for CVE-2014-3570.
+1,boringssl,9821454f2bad416f22fab57c66800fa6f20fdeda,Add tests for CVE-2014-3511.
+1,boringssl,6acf476eb6fd1fb0ff19f17d26c54eab5a7aedff,Make tls_session_secret_cb work with CVE-2014-0224 fix.
+1,boringssl,bed2214b3ee623f0b817fddb1042f9b0d8735243,Fix for CVE-2014-0195
+1,boringssl,ce7f9caa98fc62afd5fc40c0f13bc51bef2e7fa1,Fix for CVE-2014-0224
+1,boringssl,ec48ffc1fe525fddf6f69a6d0722a5f9ce532737,Additional CVE-2014-0224 protection.
+1,boringssl,895780572b7895784ed7088248ecb2ed5dd0c97a,Fix CVE-2014-0221
+1,boringssl,d06eddd15cc94023a9a3fedf7b1c28aabf159e4d,Fix CVE-2014-3470
+1,boringssl,e2c2f60c447eeb069a6d12e349347956ec8e42c9,Don't try and verify signatures if key is NULL (CVE-2013-0166)
+1,openssl,97652f0b3a557876462ef30373ac5eeeaa88b295,Add a test for CVE-2017-3737
+1,openssl,9d7ce8d42b80fda2566c70f0d4de4069bb34e72c,Fix no-cms (CVE-2016-7053)
+1,openssl,a378a46985698bf2576b2990e7faf21f62dd176a,add test for CVE-2016-7053
+1,openssl,2fac86d9abeaa643677d1ffd0a139239fdf9406a,bn/asm/x86_64-mont.pl: fix for CVE-2016-7055 (Low severity).
+1,openssl,dca2e0ee1745ed2d9cba8c29f334f881a58f85dc,test/bntest.c: regression test for CVE-2016-7055.
+1,openssl,44f206aa9dfd4f226f17d9093732dbece5300aa6,Add to fuzz corpora for CVE-2016-6309
+1,openssl,106cb9505746ddb69dc07ef45232084e620940ec,Add test for CVE-2016-2018
+1,openssl,9f13d4dd5ec420fb2fa0a7b94a6d66bb2700a492,add test for CVE-2016-2109
+1,openssl,380f18ed5f140e0ae1b68f3ab8f4f7c395658d9e,CVE-2016-0798: avoid memory leak in SRP
+1,openssl,29851264f11ccc70c6c0140d7e3d8d93ef5c9b11,bn/asm/x86_64-mont5.pl: fix carry propagating bug (CVE-2015-3193).
+1,openssl,593e9c638c58e1a510c519db0d024527113330f3,Add test for CVE-2015-1793
+1,openssl,34e3edbf3a10953cb407288101fd56a629af22f9,Fix for CVE-2015-0291
+1,openssl,a7a44ba55cb4f884c6bc9ceac90072dea38e66d0,Fix for CVE-2014-3570 (with minor bn_asm.c revamp).
+1,openssl,248385c606620b29ecc96ca9d3603463f879652b,Follow on from CVE-2014-3571. This fixes the code that was the original source of the crash due to p being NULL. Steve's fix prevents this situation from occuring - however this is by no means obvious by looking at the code for dtls1_get_record. This fix just makes things look a bit more sane.
+1,openssl,fb8d9ddb9dc19d84dffa84932f75e607c8a3ffe6,Make tls_session_secret_cb work with CVE-2014-0224 fix.
+1,openssl,410e444b71bca5af929fe82162cbe37e31c82083,Fix for CVE-2014-0195
+1,openssl,a91be10833e61bcdc9002de28489405101c52650,Fix for CVE-2014-0224
+1,openssl,a7c682fb6f692c9a3868777a7ff305784714c131,Additional CVE-2014-0224 protection.
+1,openssl,b4322e1de8be66ff230e26999b766ca1a42f9476,Fix CVE-2014-0221
+1,openssl,a5362db4603910b1bb978163e0e7dc8890727300,Fix CVE-2014-3470
+1,openssl,b48310627d1fdc58f64ccf208ac82c732e654dca,Don't try and verify signatures if key is NULL (CVE-2013-0166) Add additional check to catch this in ASN1_item_verify too. (cherry picked from commit 66e8211c0b1347970096e04b18aa52567c325200)
+1,openssl,f9b6c0ba4c02497782f801e3c45688f3efaac55c,Fix for CVE-2014-0076
+1,openssl,8d65fdb62e517281350372775b5f93fcc8489681,Add fix for CVE-2013-4353 (cherry picked from commit 6b42ed4e7104898f4b5b69337589719913b36404)
+1,openssl,206310c3056847fef7e657879f05a09763c2131e,Fix bug in CVE-2011-4619: check we have really received a client hello before rejecting multiple SGC restarts.
+1,openssl,855d29184ea88140e3c810e854607cc00a3f1806,"Fix for DTLS DoS issue introduced by fix for CVE-2011-4109. Thanks to Antonio Martin, Enterprise Secure Access Research and Development, Cisco Systems, Inc. for discovering this bug and preparing a fix. (CVE-2012-0050)"
+1,openssl,27dfffd5b75ee1db114e32f6dc73e266513889c5,Clear bytes used for block padding of SSL 3.0 records. (CVE-2011-4576)
+1,openssl,d0dc991c6228564212ace119440a9ac5f21578bc,Only allow one SGC handshake restart for SSL/TLS. (CVE-2011-4619)
+1,openssl,6bf896d9b1693916d9e8d303f9e3cc04959632b2,Check GOST parameters are not NULL (CVE-2012-0027)
+1,openssl,be71c37296b3ba43c944eaa220ac62413782bad3,Prevent malformed RFC3779 data triggering an assertion failure (CVE-2011-4577)
+1,openssl,0486cce653b62d26a8ca37ac12f69f1a6b998844,Initialise X509_STORE_CTX properly so CRLs with nextUpdate date in the past produce an error (CVE-2011-3207)
+1,openssl,c415adc26ffd07c7a9f42e7ec3aff0b404a4ce5f,Sync with 1.0.1 branch. (CVE-2011-0014 OCSP stapling fix has been applied to HEAD as well.)
+1,openssl,88f2a4cf9ced521e2c2874a1c32af0eeaa027f40,CVE-2010-4180 fix (from OpenSSL_1_0_0-stable)
+1,openssl,732d31beeeb2e2e9f44d05da8387cfeca06b91b8,"bring HEAD up to date, add CVE-2010-3864 fix, update NEWS files"
+1,openssl,3cbb15ee813453c52694c1d6f9a89eb7ae757943,add CVE-2010-0742 and CVS-2010-1633 fixes
+1,openssl,3e8b6485b342d70e980418bc4bb2c60148d844d8,"Fix for Record of death"" vulnerability CVE-2010-0740."""
+1,openssl,2d9dcd4ff0923347fab727ac90e8526dd65e4e07,Always check bn_wexpend() return values for failure (CVE-2009-3245).
+1,openssl,5e3225cc44ebdce3a88d04a627e975b3e76a6f9a,"Introduce limits to prevent malicious keys being able to cause a denial of service.  (CVE-2006-2940) [Steve Henson, Bodo Moeller]"
+1,openssl,348be7ec60f7cce7503ba759a1a5a7591a648f1f,Fix ASN.1 parsing of certain invalid structures that can result in a denial of service.  (CVE-2006-2937)  [Steve Henson]
+1,openssl,3ff55e9680cc99f330f25e48cd1422e3459c02de,"Fix buffer overflow in SSL_get_shared_ciphers() function. (CVE-2006-3738) [Tavis Ormandy and Will Drewry, Google Security Team]"
+1,openssl,b79aa05e3babdbab92c6356f6e51f7bb43c41576,Avoid PKCS #1 v1.5 signature attack discovered by Daniel Bleichenbacher (CVE-2006-4339)
+1,jetty.project,2508d73a94439078d5ae769cfce246564d758c69,Added note for CVE-2016-4800 and several small grammatical clean ups.
+1,jetty.project,b4390f98529fce165e6394b94122b427fdfb8a5e,CVE-2009-3555 remove test for working reneg as JVMs now have the fix
+1,jetty.project,102625b86c8e82e0e3d02a71028ba62795aff52b,CVE-2009-3555 prevent renegotiation
+1,jetty.project,b90ad09443e1771e37d23e393afe842759c20454,CVE-2009-3555 prevent renegotiation
+1,linux,69c64866ce072dea1d1e59a0d61e0f66c0dffb76,dccp: CVE-2017-8824: use-after-free in DCCP code
+1,linux,d9092f52d7e61dd1557f2db2400ddb430e85937e,kvm: x86: Check memopp before dereference (CVE-2016-8630)
+1,linux,63ea0a49ae0b145b91ff2b070c01b66fc75854b9,KVM: x86: Fix of previously incomplete fix for CVE-2014-8480
+1,linux,ce9d7f7b45930ed16c512aabcfe651d44f1c8619,Merge branch 'CVE-2014-7970' of git://git.kernel.org/pub/scm/linux/kernel/git/luto/linux
+1,linux,0ef3a56b1c466629cd0bf482b09c7b0e5a085bb5,Merge branch 'CVE-2014-7975' of git://git.kernel.org/pub/scm/linux/kernel/git/luto/linux
+1,linux,350b8bdd689cd2ab2c67c8a86a0be86cfa0751a7,kvm: iommu: fix the third parameter of kvm_iommu_put_pages (CVE-2014-3601)
+1,linux,554086d85e71f30abe46fc014fea31929a7c6a8a,"x86_32, entry: Do syscall exit work on badsys (CVE-2014-4508)"
+1,linux,5678de3f15010b9022ee45673f33bcfc71d47b60,KVM: ioapic: fix assignment of ioapic->rtc_status.pending_eoi (CVE-2014-0155)
+1,linux,a08d3b3b99efd509133946056531cdf8f3a0c09b,kvm: x86: fix emulator buffer overflow (CVE-2014-0049)
+1,linux,17d68b763f09a9ce824ae23eb62c9efc57b69271,KVM: x86: fix guest-initiated crash with x2apic (CVE-2013-6376)
+1,linux,fda4e2e85589191b123d31cdc21fd33ee70f50fd,KVM: x86: Convert vapic synchronization to _cached functions (CVE-2013-6368)
+1,linux,b963a22e6d1a266a67e9eecc88134713fd54775c,KVM: x86: Fix potential divide by 0 in lapic (CVE-2013-6367)
+1,linux,338c7dbadd2671189cec7faf64c84d01071b3f96,KVM: Improve create VCPU parameter (CVE-2013-4587)
+1,linux,47ab1a2de42031021965b81cbab4f3b4c5696d07,Merge branch 'for-3.11/CVE-2013-2888' into for-3.12/upstream
+1,linux,a2c118bfab8bc6b8bb213abfc35201e441693d55,KVM: Fix bounds checking in ioapic indirect register reads (CVE-2013-1798)
+1,linux,0b79459b482e85cb7426aa7da683a9f2c97aeae1,KVM: x86: Convert MSR_KVM_SYSTEM_TIME to use gfn_to_hva_cache functions (CVE-2013-1797)
+1,linux,c300aa64ddf57d9c5d9c898a64b36877345dd4a9,KVM: x86: fix for buffer overflow in handling of MSR_KVM_SYSTEM_TIME (CVE-2013-1796)
+1,linux,6d1068b3a98519247d8ba4ec85cd40ac136dbdf9,KVM: x86: invalid opcode oops on SET_SREGS with OSXSAVE bit set (CVE-2012-4461)
+1,linux,e0e3cea46d31d23dc40df0a49a7a2c04fe8edfea,af_netlink: force credentials passing [CVE-2012-3520]
+1,linux,313d7b003ceceb797e8c0d18ab085ed0638b4aff,blkback: Fix CVE-2010-3699
+1,linux,1362fa078dae16776cd439791c6605b224ea6171,DNS: Fix a NULL pointer deref when trying to read an error key [CVE-2011-1076]
+1,linux,a27e13d370415add3487949c60810e36069a23a6,econet: fix CVE-2010-3848
+1,linux,16c41745c7b92a243d0874f534c1655196c64b74,econet: fix CVE-2010-3850
+1,linux,fa0e846494792e722d817b9d3d625a4ef4896c96,"econet: disallow NULL remote addr for sendmsg(), fixes CVE-2010-3849"
+1,linux,5fa782c2f5ef6c2e4f04d3e228412c9b4a4c8809,sctp: Fix skb_over_panic resulting from multiple invalid parameter errors (CVE-2010-1173) (v4)
+1,linux,c0cd884af045338476b8e69a61fceb3f34ff22f1,r8169: offical fix for CVE-2009-4537 (overlength frame DMAs)
+1,linux,690e744869f3262855b83b4fb59199cf142765b0,[SCSI] gdth: Prevent negative offsets in ioctl CVE-2009-3080
+1,linux,dbda6ac0897603f6c6dfadbbc37f9882177ec7ac,MIPS: CVE-2009-0029: Enable syscall wrappers.
+1,linux,67605d6812691bbd2158d2f60259e0407611bc1b,[CVE-2009-0029] sparc: Enable syscall wrappers for 64-bit
+1,linux,26689452f5ca201add63b1b1ff0dbcf82d6885e7,[CVE-2009-0029] s390 specific system call wrappers
+1,linux,2b66421995d2e93c9d1a0111acf2581f8529c6e5,[CVE-2009-0029] System call wrappers part 33
+1,linux,d4e82042c4cfa87a7d51710b71f568fe80132551,[CVE-2009-0029] System call wrappers part 32
+1,linux,836f92adf121f806e9beb5b6b88bd5c9c4ea3f24,[CVE-2009-0029] System call wrappers part 31
+1,linux,6559eed8ca7db0531a207cd80be5e28cd6f213c5,[CVE-2009-0029] System call wrappers part 30
+1,linux,2e4d0924eb0c403ce4014fa139d1d61bf2c44fee,[CVE-2009-0029] System call wrappers part 29
+1,linux,938bb9f5e840eddbf54e4f62f6c5ba9b3ae12c9d,[CVE-2009-0029] System call wrappers part 28
+1,linux,1e7bfb2134dfec37ce04fb3a4ca89299e892d10c,[CVE-2009-0029] System call wrappers part 27
+1,linux,c4ea37c26a691ad0b7e86aa5884aab27830e95c9,[CVE-2009-0029] System call wrappers part 26
+1,linux,d5460c9974a321a194aded4a8c4daaac68ea8171,[CVE-2009-0029] System call wrappers part 25
+1,linux,e48fbb699f82ef1e80bd7126046394d2dc9ca7e6,[CVE-2009-0029] System call wrappers part 24
+1,linux,5a8a82b1d306a325d899b67715618413657efda4,[CVE-2009-0029] System call wrappers part 23
+1,linux,3e0fa65f8ba4fd24b3dcfaf14d5b15eaab0fdc61,[CVE-2009-0029] System call wrappers part 22
+1,linux,20f37034fb966a1c35894f9fe529fda0b6440101,[CVE-2009-0029] System call wrappers part 21
+1,linux,3cdad42884bbd95d5aa01297e8236ea1bad70053,[CVE-2009-0029] System call wrappers part 20
+1,linux,003d7ab479168132a2b2c6700fe682b08f08ab0c,[CVE-2009-0029] System call wrappers part 19
+1,linux,a6b42e83f249aad723589b2bdf6d1dfb2b0997c8,[CVE-2009-0029] System call wrappers part 18
+1,linux,ca013e945b1ba5828b151ee646946f1297b67a4c,[CVE-2009-0029] System call wrappers part 17
+1,linux,002c8976ee537724b20a5e179d9b349309438836,[CVE-2009-0029] System call wrappers part 16
+1,linux,a26eab2400f0477bfac0255600552394855016f7,[CVE-2009-0029] System call wrappers part 15
+1,linux,3480b25743cb7404928d57efeaa3d085708b04c2,[CVE-2009-0029] System call wrappers part 14
+1,linux,6a6160a7b5c27b3c38651baef92a14fa7072b3c1,[CVE-2009-0029] System call wrappers part 13
+1,linux,64fd1de3d821659ac0a3004fd5ee1de59e64af30,[CVE-2009-0029] System call wrappers part 12
+1,linux,257ac264d69017270fbc3cf5536953525db4076c,[CVE-2009-0029] System call wrappers part 11
+1,linux,bdc480e3bef6eb0e7071770834cbdda7e30a5436,[CVE-2009-0029] System call wrappers part 10
+1,linux,a5f8fa9e9ba5ef3305e147f41ad6e1e84ac1f0bd,[CVE-2009-0029] System call wrappers part 09
+1,linux,17da2bd90abf428523de0fb98f7075e00e3ed42e,[CVE-2009-0029] System call wrappers part 08
+1,linux,754fe8d297bfae7b77f7ce866e2fb0c5fb186506,[CVE-2009-0029] System call wrappers part 07
+1,linux,5add95d4f7cf08f6f62510f19576992912387501,[CVE-2009-0029] System call wrappers part 06
+1,linux,362e9c07c7220c0a78c88826fc0d2bf7e4a4bb68,[CVE-2009-0029] System call wrappers part 05
+1,linux,b290ebe2c46d01b742b948ce03f09e8a3efb9a92,[CVE-2009-0029] System call wrappers part 04
+1,linux,ae1251ab785f6da87219df8352ffdac68bba23e4,[CVE-2009-0029] System call wrappers part 03
+1,linux,dbf040d9d1cbf1ef6250bdb095c5c118950bcde8,[CVE-2009-0029] System call wrappers part 02
+1,linux,58fd3aa288939d3097fa04505b25c2f5e6e144d1,[CVE-2009-0029] System call wrappers part 01
+1,linux,6673e0c3fbeaed2cd08e2fd4a4aa97382d6fedb0,[CVE-2009-0029] System call wrapper special cases
+1,linux,ed6bb6194350dc6ae97a65dbf2d621a3dbe6bbe9,[CVE-2009-0029] s390: enable system call wrappers
+1,linux,ee6a093222549ac0c72cfd296c69fa5e7d6daa34,[CVE-2009-0029] powerpc: Enable syscall wrappers for 64-bit
+1,linux,1a94bc34768e463a93cb3751819709ab0ea80a01,[CVE-2009-0029] System call wrapper infrastructure
+1,linux,f627a741d24f12955fa2d9f8831c3b12860635bd,[CVE-2009-0029] Make sys_syslog a conditional system call
+1,linux,c9da9f2129d6a421c32e334a83770a9e67f7feac,[CVE-2009-0029] Make sys_pselect7 static
+1,linux,1134723e96f6e2abcf8bfd7a2d1c96fcc323ef35,[CVE-2009-0029] Remove __attribute__((weak)) from sys_pipe/sys_pipe2
+1,linux,e55380edf68796d75bf41391a781c68ee678587d,[CVE-2009-0029] Rename old_readdir to sys_old_readdir
+1,linux,2ed7c03ec17779afb4fcfa3b8c61df61bd4879ba,[CVE-2009-0029] Convert all system calls to return a long
+1,linux,4c696ba7982501d43dea11dbbaabd2aa8a19cc42,[CVE-2009-0029] Move compat system call declarations to compat header file
+1,linux,17b24b3c97498935a2ef9777370b1151dfed3f6f,ATM: CVE-2008-5079: duplicate listen() on socket corrupts the vcc table
+1,linux,01a1a3cc1e3fbe718bd06a2a5d4d1a2d0fb4d7d9,V4L/DVB (9624): CVE-2008-5033: fix OOPS on tvaudio when controlling bass/treble
+1,linux,4b40893918203ee1a1f6a114316c2a19c072e9bd,drm/i915: fix ioremap of a user address for non-root (CVE-2008-3831)
+1,linux,3d6e48f43340343d97839eadb1ab7b6a3ea98797,[S390] CVE-2008-1514: prevent ptrace padding area read/write in 31-bit mode
+1,linux,5a021e9ffd56c22700133ebc37d607f95be8f7bd,random: fix bound check ordering (CVE-2007-3105)
+1,linux,99d24edeb6abc6ca3a0d0fbdb83c664c04403c8c,"[NETFILTER]: {ip, nf}_conntrack_sctp: fix remotely triggerable NULL ptr dereference (CVE-2007-2876)"
+1,linux,059819a41d4331316dd8ddcf977a24ab338f4300,[PATCH] Fix buffer overflow in Omnikey CardMan 4040 driver (CVE-2007-0005)
+1,linux,00a2b0f6dd2372842df73de72d51621b539fea44,Fix possible UDF deadlock and memory corruption (CVE-2006-4145)
+1,linux,c164a9ba0a8870c5c9d353f63085319931d69f23,Fix sctp privilege elevation (CVE-2006-3745)
+1,linux,abf75a5033d4da7b8a7e92321d74021d1fcfb502,[PATCH] Fix prctl privilege escalation and suid_dumpable (CVE-2006-2451)
+1,linux,6c813c3fe9e30fcf3c4d94d2ba24108babd745b0,[NETFILTER]: Fix small information leak in SO_ORIGINAL_DST (CVE-2006-1343)
+1,linux,2c8ac66bb2ff89e759f0d632a27cc64205e9ddd9,"[NETFILTER]: Fix do_add_counters race, possible oops or info leak (CVE-2006-0039)"
+1,linux,3b7c8108273bed41a2fc04533cc9f2026ff38c8e,[PATCH] smbfs chroot issue (CVE-2006-1864)
+1,linux,b78b6af66a5fbaf17d7e6bfc32384df5e34408c8,[PATCH] shmat: stop mprotect from giving write permission to a readonly attachment (CVE-2006-1524)
+1,linux,330d57fb98a916fa8e1363846540dd420e99499a,[PATCH] Fix sysctl unregistration oops (CVE-2005-2709)
+1,libpng,61e0a3809185b84463a68df3dd39cdf004293c8c,[libpng16] Reference CVE-2017-12652 in CHANGES.
+1,libpng,a315efe3b29b5d2c8756c16ebfdba2810045d9ff,"[libpng16] Mention CVE-2016-5737 in CHANGES, update intel last changed"" date"""
+1,libpng,aa5bb2c3dd2fe53333b48fba68d40e9d1358a234,"[libpng16] Clean up LICENSE, mention CVE-2016-10087 in CHANGES."
+1,libpng,9f0ac8548b61651a111b7e611c90cda87dd567f0,[libpng16] Mention CERT VU#684412 and CVE-2014-0333 in CHANGES and ANNOUNCE.
+1,libpng,05fc4ccd3066b7a2f14be221c8f2cb6436134931,[devel] Added references to CVE-2011-2501 and -0408 to the CHANGES file.
+1,mozilla,83ab2f2e39e20720fa698c32c47dc28481a28306,Bug 1148732 - (CVE-2015-4483) feed: protocol + POST method => mixed scripting. r=tanvi
+1,mozilla,89fa2fba162d66ec97bcaf7c1950ea017907e9d5,"Bug 1257614: update git to a 2.8.0-rc3 for CVE-2016-2324, CVE-2016-2315; r=garndt"
+1,mozilla,68136cd2db016a3dec5678b9764557e4496833eb,Crashtest for bug 782141 - (CVE-2012-3969) Heap-buffer-overflow in nsSVGFEMorphologyElement::Filter. r=me.
+1,mozilla,2eae427786ae48984b584196f3d0b6feff760454,"Bug 549641, Firefox raises alarm (in error console) about SSL servers being vulnerable to CVE-2009-3555 r=rrelyea, r=honzab"
+1,mozilla,62caa75f94837d20c50b9a2f48f114ff8b7902d4,"Bug 535649 -  Implement UI around CVE-2009-3555 and draft-rescorla-tls-renegotiation, r=rrelyea == NSS 3.12.6 will block some renegotiation attempts on SSL sockets by default == This patch does not yet implement new UI by default, but adds 4 new prefs to get fine grained control (blocking/allowing, displaying broken state) == One of the prefs is a temporary pref that is supposed to go away at some point in the future"
+1,httpd,b2a5958244b7694d5c04196c48dd87635a90620d,httpdunit: merge CVE-2017-9788 regression tests from feature branch
+1,httpd,a6ae987b3150dd0471fa7d4771e9345f3c3b9460,CVE-2017-9788: add unit tests for get_digest_rec()
+1,httpd,3d23a999daa4b65708b032e088558f0c855723a0,CVE-2017-3167: add documentation to ap_get_basic_auth_pw()
+1,httpd,29c63b786ae028d82405421585e91283c8fa0da3,SECURITY: CVE-2016-8740
+1,httpd,cd2b7a26c776b0754fb98426a67804fd48118708,SECURITY: CVE-2015-3183 (cve.mitre.org)
+1,httpd,6a974059190b8a0c7e499f4ab12fe108127099cb,"*) SECURITY: CVE-2015-0253 (cve.mitre.org)      core: Fix a crash introduced in with ErrorDocument 400 pointing      to a local URL-path with the INCLUDES filter active, introduced      in 2.4.11. PR 57531. [Yann Ylavic]"
+1,httpd,643f0fcf3b8ab09a68f0ecd2aa37aafeda3e63ef,*) SECURITY: CVE-2015-0228 (cve.mitre.org)      mod_lua: A maliciously crafted websockets PING after a script      calls r:wsupgrade() can cause a child process crash.      [Edward Lu <Chaosed0 gmail.com>]
+1,httpd,2d16863c1a4f79c2ebbdcb3a352a4ed7e7044be1,*) SECURITY: CVE-2014-8109 (cve.mitre.org)      mod_lua: Fix handling of the Require line when a LuaAuthzProvider is      used in multiple Require directives with different arguments.      PR57204 [Edward Lu <Chaosed0 gmail.com>]
+1,httpd,894cf92e7e7aa0cb5139d390d97107a0237c9405,mod_authnz_fcgi is not vulnerable to the CVE-2014-3583 bug (and it is too late to use the same CVE anyway).
+1,httpd,f392bdefdda033b2853dce4848d101b392ae6c91,"mod_proxy_fcgi, mod_authnz_fcgi: SECURITY: CVE-2014-3583 (cve.mitre.org) Fix a potential crash with response headers' size above 8K."
+1,httpd,1245aa5f388130c5712cc8542d0e67f23b3da23b,mod_proxy_fcgi: CVE-2014-3583: Fix a potential crash with response headers' size above 8K.
+1,httpd,1406f165f5cacb306e7f47a246aabbd10fba19ee,SECURITY (CVE-2014-3581): Fix a mod_cache NULL pointer deference in Content-Type handling.
+1,httpd,bd34b9d92894b7fc01810fc11a059fa30067e431,"*) SECURITY: CVE-2013-5704 (cve.mitre.org)      core: HTTP trailers could be used to replace HTTP headers      late during request processing, potentially undoing or      otherwise confusing modules that examined or modified      request headers earlier.  Adds MergeTrailers"" directive to restore      legacy behavior."""
+1,httpd,69ce95ded2b530427240fe185ae513d0b6616576,"SECURITY (CVE-2014-0117): Fix a crash in mod_proxy.  In a reverse proxy configuration, a remote attacker could send a carefully crafted request which could crash a server process, resulting in denial of service."
+1,httpd,6a5460f32415c2087b6dd5f67281b111a916a79b,SECURITY (CVE-2014-0226): Fix a memory consumption denial of service in the WinNT MPM used in all Windows installations. Workaround: AcceptFilter <protocol> {none|connect}
+1,httpd,a30c26ca9d22f6482465de7adc4b045519127cfc,"*) SECURITY: CVE-2014-0231 (cve.mitre.org)    mod_cgid: Fix a denial of service against CGI scripts that do    not consume stdin that could lead to lingering HTTPD child processes    filling up the scoreboard and eventually hanging the server.    [Rainer Jung, Eric Covener, Yann Ylavic]"
+1,httpd,2bcaded2f641a7444bc7519c96919bdacec86850,"*) SECURITY: CVE-2014-0118 (cve.mitre.org)      mod_deflate: The DEFLATE input filter (inflates request bodies) now      limits the length and compression ratio of inflated request bodies to avoid      denial of sevice via highly compressed bodies.  See directives      DeflateInflateLimitRequestBody, DeflateInflateRatioLimit,      and DeflateInflateRatioBurst."
+1,httpd,b47236794b0209190934d019cab39c41e6e4c52b,"SECURITY (CVE-2014-0226): Fix a race condition in scoreboard handling, which could lead to a heap buffer overflow.  Thanks to Marek Kroemeke working with HP's Zero Day Initiative for reporting this."
+1,httpd,8255e22e35392afd4152a80253236c2d5096201a,CVE-2014-0098 (reported by Rainer Canavan <rainer-apache 7val com>) Segfaults w/ truncated cookie logging.
+1,httpd,c9e1b52d3616a51879c49a37858e9d9e29f895f1,"* modules/mappers/mod_rewrite.c (cmd_rewriteoptions, hook_uri2file):   Add AllowAnyURI"" flag which disables the strict URL-path input   string check introduced to fix CVE-2011-3368/CVE-2011-4317."""
+1,httpd,706691e6fd5445f6d60456f55c5647e788e7b3ad,SECURITY: CVE-2012-2687 (cve.mitre.org):
+1,httpd,ae522645f034c56ed8784ba127b716447c55ba5b,"CVE-2012-0053: Fix an issue in error responses that could expose httpOnly"" cookies when no custom ErrorDocument is specified for status code 400."""
+1,httpd,8e905e6d97ab5575ae82ff7ffff35d5d3769914b,Adjust CVE-2011-3368/CVE-2011-4317 fixes to rely solely on core's translate-name to fail unsupported URIs.
+1,httpd,b0835c731a7d7f65b5d409f42b886fc8e3111bfc,"SECURITY (CVE-2012-0031): Fix possible crash on shutdown if a child changes the sb_type field in the scoreboard.  Since unprivileged children should not be able to affect the parent in this way, this is treated as a Low severity security issue."
+1,httpd,318b86756de2049f652561e1a66420b4a92d4a7e,"Fix for additional cases of URL rewriting with ProxyPassMatch or RewriteRule, where particular request-URIs could result in undesired backend network exposure in some configurations. (CVE-2011-4317)"
+1,httpd,f8a11311d73753e0440834c94173b26c9d7c922c,- add note here in light of CVE-2011-3368
+1,httpd,b10aeb17718f4cbb4412a7d8355c060517b61060,"- add a security warning, and tweak the example, in light of CVE-2011-3368"
+1,httpd,2125cb1b1f139434d5e3c69dd73487fcab8cf34a,SECURITY (CVE-2011-3368): Prevent unintended pattern expansion in some reverse proxy configurations by strictly validating the request-URI:
+1,httpd,d57bee112f5208e86d64284e512a61325604bc7d,* modules/http/byterange_filter.c (ap_byterange_filter): Don't reveal   the pid in the boundary delimiter (part of CVE-2003-1418).
+1,httpd,1f36e470005b1fb8276c893a6458f7045d3af5c2,* Fix a regression in the CVE-2011-3192 byterange fix:   Range: bytes=-1
+1,httpd,d916656513ffb95bfd16cfaff8d824d440c5d327,Fold in Stefan's initial PoC for fixing memory issues with ranges by keeping orig brigade untouched and avoiding 1byte brigades (related to CVE-2011-3192)
+1,httpd,ceadbb2ba891b0822f5f6a493a80e4adda23431d,"Fix CVE-2010-1623 in mod_reqtimeout, too. It includes a non-blocking variant of apr_brigade_split_line()."
+1,httpd,da187a4ba99eee56ed78cb05f17bb2621f619baf,CVE-2010-1452: Fix handling of missing path segments in the parsed URI structure.
+1,httpd,9d13040915bc02da835c39e97c0dfbc504f435df,reflect assignment of CVE-2010-0434
+1,httpd,2fe8ec85fa8ef1340a61e688f3bc43c799add78e,SECURITY: CVE-2010-0408 (cve.mitre.org)
+1,httpd,e9602aecc484ce45779b1051987c826037d5ff29,SECURITY: CVE-2010-0425 (cve.mitre.org)
+1,httpd,0a4c1543e59727c67094956ccfd18c023a3fca50,"Further mitigation for the TLS renegotation attack, CVE-2009-3555:"
+1,httpd,06f68fdc54c72573d4b520219b87a05abb098380,SECURITY: Partial fix for CVE-2009-3555:
+1,httpd,9881400cd1ad20b036ac7bd2d7394919005490c3,Security fix - this is presumed to fix CVE-2009-3094 (the disclosed information was limited so this has not been confirmed):
+1,httpd,404947824a978c89589d0fa59ada0ee1531bb147,Security fix - this is presumed to fix CVE-2009-3095 (the disclosed information was limited so this has not been confirmed):
+1,httpd,4685944e0654edbe22351f6425323cf8634de01c,Security fix for CVE-2009-1890:
+1,httpd,b49499fe7cadaad4f61bfed5e9335f0d0284b356,* Fix for the following configuration where the exec command was disabled   in /subdir. All CVE-2009-1195 tests still pass with this patch.
+1,httpd,701b5288abf6d237e1793d9c9d0236a659f9dbc4,Security fix for CVE-2009-1195: fix Options handling such that 'AllowOverride Options=IncludesNoExec' does not permit Includes with exec= enabled to be configured in an .htaccess file:
+1,httpd,4dbdf1b230a9316ef0c4cf0791c35905becb55ca,"Use CVE-2009-1191 for this issue.  We would only share a CVE name where the flaw was due to a shared code base, and this isn't the case for the mod_jk CVE-2008-5519 issue."
+1,httpd,9d283cf23ab128b793cc5fa6cd4c1bfd9c820471,* Prevent XSS attacks when using wildcards in the path of the FTP URL   (CVE-2008-2939). Discovered by Marc Bevand of Rapid7.
+1,httpd,4711f90002dea305600274287e470b696f6ae79b,Patch for CVE-2008-2364...
+1,httpd,20f3a459a1d80d476e133ab57112087818cda1cb,"No functional change; simplify the CVE-2007-6420 fix slightly, as suggested by rpluem:"
+1,httpd,ad41158e0ae128694b3fb4298bdb6b90bc3cb673,Prevent CSRF attacks against the balancer-manager (CVE-2007-6420)
+1,httpd,b7881ae804aa98ca91cc47616b41fb7ece9f7c70,Fix CVE-2007-5000:
+1,httpd,c180db9225764c60d3ff842ef73b781c843736e5,Add alternative fixes for CVE-2007-3304:
+1,httpd,6f0c8008746b58eb0a59f59501163eea2921d03d,Fix CVE-2006-5752:
+1,httpd,0fcdd1e21cd2f75c1887e7872e5f0ca79a51f8f4,SECURITY: CVE-2007-1862 (cve.mitre.org) mod_mem_cache: Copy headers into longer lived storage; header names and values could previously point to cleaned up storage
+1,httpd,2dd09306752ca58807d9fe050a098ef94826fc32,* CVE-2006-3747 was the main reason to release 2.2.3. So place the changelog   entry where it belongs.
+1,httpd,95922f28042fd334ff2548ca226bf2dca22095c5,Add a note about case-sensitivity to the windows platform docs. Partially in response to the disputed vulnerability: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4110
+1,httpd,e2a9028db5b079e01eb6b9ac06299bd06dd59574,SECURITY: CVE-2006-3747 (cve.mitre.org) mod_rewrite: Fix an off-by-one security problem in the ldap scheme handling.  For some RewriteRules this could lead to a pointer being written out of bounds.  Reported by Mark Dowd of McAfee.
+1,httpd,a34a19e4b4c9ffc488af26972173633275fe22da,Bring forward the fix for CVE-2005-3352 already on the branches:
+1,solaris-xorg,fbc4b88c73fe862e6ba3f36249c84ecc77915780,7022433 CVE-2011-0465 Root execution vulnerability via xrdb by DHCP and XDMCP
+1,solaris-xorg,8a98737a2506026dc81b3d4d5ae44f61eafe27d0,6975036 Update freetype to 2.4.1 6974339 CVE-2010-1797 stack overflow in freetype 2.4.1 or older releases.
+1,solaris-xorg,29930a0f830814d12e2e699e05e129cad18dc7ce,6876618 Upgrade Freetype2 to 2.3.9 6877323 [CVE-2009-0946] security vulnerability in freetype 2.3.9 and earlier
+1,solaris-xorg,fc4cc7ea829b65e4dbc097676c0e0a280523e3af,"6777095 RealVNC VNC Viewer CMsgReader::readRect()"" Encoding Type Vulnerability [CVE-2008-4770]"""
+1,solaris-xorg,36fafadd9d4307f0917b31051a8ffd6575e81b29,6642762 *Xorg* [X.Org bug 13706] file existence disclosure vulnerability [CVE-2007-5958]
+1,solaris-xorg,2b75523a8762717347e0cb2f066487814a205825,6589553 overflow vulnerability in freetype [CVE-2007-2754]
+1,solaris-xorg,1f77c82e4a3dce0f07dd8253d4dad0fad09f1786,"6466790: additional freetype vulnerabilities: CVE-2006-0747, CVE-2006-1861, CVE-2006-3467"
+1,solaris-xorg,c2dcd2dcbeda0824c9e912963fcb2fbbaec80ea0,6464170 *Xorg* [X.Org Bug #8001] CID-keyed Fonts 'CIDAFM()' Integer Overflow Vulnerability 6464172 *Xorg* [X.Org Bug #8000] CID-keyed Fonts 'scan_cidfont()' Integer Overflow Vulnerability 6465806 *Xorg* [X.Org bug #7535][CVE-2006-3467] Freetype2 pcf font problem also affects libXfont
+1,solaris-xorg,c7e8960956eaea6f2e9584f22ddd8f17e3c452a5,6416841 [CVE-2006-1526] X.Org bug #6642: buffer overflow in Render extension in Xorg
+1,kmsan,69c64866ce072dea1d1e59a0d61e0f66c0dffb76,dccp: CVE-2017-8824: use-after-free in DCCP code
+1,kmsan,d9092f52d7e61dd1557f2db2400ddb430e85937e,kvm: x86: Check memopp before dereference (CVE-2016-8630)
+1,kmsan,63ea0a49ae0b145b91ff2b070c01b66fc75854b9,KVM: x86: Fix of previously incomplete fix for CVE-2014-8480
+1,kmsan,ce9d7f7b45930ed16c512aabcfe651d44f1c8619,Merge branch 'CVE-2014-7970' of git://git.kernel.org/pub/scm/linux/kernel/git/luto/linux
+1,kmsan,0ef3a56b1c466629cd0bf482b09c7b0e5a085bb5,Merge branch 'CVE-2014-7975' of git://git.kernel.org/pub/scm/linux/kernel/git/luto/linux
+1,kmsan,350b8bdd689cd2ab2c67c8a86a0be86cfa0751a7,kvm: iommu: fix the third parameter of kvm_iommu_put_pages (CVE-2014-3601)
+1,kmsan,554086d85e71f30abe46fc014fea31929a7c6a8a,"x86_32, entry: Do syscall exit work on badsys (CVE-2014-4508)"
+1,kmsan,5678de3f15010b9022ee45673f33bcfc71d47b60,KVM: ioapic: fix assignment of ioapic->rtc_status.pending_eoi (CVE-2014-0155)
+1,kmsan,a08d3b3b99efd509133946056531cdf8f3a0c09b,kvm: x86: fix emulator buffer overflow (CVE-2014-0049)
+1,kmsan,17d68b763f09a9ce824ae23eb62c9efc57b69271,KVM: x86: fix guest-initiated crash with x2apic (CVE-2013-6376)
+1,kmsan,fda4e2e85589191b123d31cdc21fd33ee70f50fd,KVM: x86: Convert vapic synchronization to _cached functions (CVE-2013-6368)
+1,kmsan,b963a22e6d1a266a67e9eecc88134713fd54775c,KVM: x86: Fix potential divide by 0 in lapic (CVE-2013-6367)
+1,kmsan,338c7dbadd2671189cec7faf64c84d01071b3f96,KVM: Improve create VCPU parameter (CVE-2013-4587)
+1,kmsan,47ab1a2de42031021965b81cbab4f3b4c5696d07,Merge branch 'for-3.11/CVE-2013-2888' into for-3.12/upstream
+1,kmsan,a2c118bfab8bc6b8bb213abfc35201e441693d55,KVM: Fix bounds checking in ioapic indirect register reads (CVE-2013-1798)
+1,kmsan,0b79459b482e85cb7426aa7da683a9f2c97aeae1,KVM: x86: Convert MSR_KVM_SYSTEM_TIME to use gfn_to_hva_cache functions (CVE-2013-1797)
+1,kmsan,c300aa64ddf57d9c5d9c898a64b36877345dd4a9,KVM: x86: fix for buffer overflow in handling of MSR_KVM_SYSTEM_TIME (CVE-2013-1796)
+1,kmsan,6d1068b3a98519247d8ba4ec85cd40ac136dbdf9,KVM: x86: invalid opcode oops on SET_SREGS with OSXSAVE bit set (CVE-2012-4461)
+1,kmsan,e0e3cea46d31d23dc40df0a49a7a2c04fe8edfea,af_netlink: force credentials passing [CVE-2012-3520]
+1,kmsan,313d7b003ceceb797e8c0d18ab085ed0638b4aff,blkback: Fix CVE-2010-3699
+1,kmsan,1362fa078dae16776cd439791c6605b224ea6171,DNS: Fix a NULL pointer deref when trying to read an error key [CVE-2011-1076]
+1,kmsan,a27e13d370415add3487949c60810e36069a23a6,econet: fix CVE-2010-3848
+1,kmsan,16c41745c7b92a243d0874f534c1655196c64b74,econet: fix CVE-2010-3850
+1,kmsan,fa0e846494792e722d817b9d3d625a4ef4896c96,"econet: disallow NULL remote addr for sendmsg(), fixes CVE-2010-3849"
+1,kmsan,5fa782c2f5ef6c2e4f04d3e228412c9b4a4c8809,sctp: Fix skb_over_panic resulting from multiple invalid parameter errors (CVE-2010-1173) (v4)
+1,kmsan,c0cd884af045338476b8e69a61fceb3f34ff22f1,r8169: offical fix for CVE-2009-4537 (overlength frame DMAs)
+1,kmsan,690e744869f3262855b83b4fb59199cf142765b0,[SCSI] gdth: Prevent negative offsets in ioctl CVE-2009-3080
+1,kmsan,dbda6ac0897603f6c6dfadbbc37f9882177ec7ac,MIPS: CVE-2009-0029: Enable syscall wrappers.
+1,kmsan,67605d6812691bbd2158d2f60259e0407611bc1b,[CVE-2009-0029] sparc: Enable syscall wrappers for 64-bit
+1,kmsan,26689452f5ca201add63b1b1ff0dbcf82d6885e7,[CVE-2009-0029] s390 specific system call wrappers
+1,kmsan,2b66421995d2e93c9d1a0111acf2581f8529c6e5,[CVE-2009-0029] System call wrappers part 33
+1,kmsan,d4e82042c4cfa87a7d51710b71f568fe80132551,[CVE-2009-0029] System call wrappers part 32
+1,kmsan,836f92adf121f806e9beb5b6b88bd5c9c4ea3f24,[CVE-2009-0029] System call wrappers part 31
+1,kmsan,6559eed8ca7db0531a207cd80be5e28cd6f213c5,[CVE-2009-0029] System call wrappers part 30
+1,kmsan,2e4d0924eb0c403ce4014fa139d1d61bf2c44fee,[CVE-2009-0029] System call wrappers part 29
+1,kmsan,938bb9f5e840eddbf54e4f62f6c5ba9b3ae12c9d,[CVE-2009-0029] System call wrappers part 28
+1,kmsan,1e7bfb2134dfec37ce04fb3a4ca89299e892d10c,[CVE-2009-0029] System call wrappers part 27
+1,kmsan,c4ea37c26a691ad0b7e86aa5884aab27830e95c9,[CVE-2009-0029] System call wrappers part 26
+1,kmsan,d5460c9974a321a194aded4a8c4daaac68ea8171,[CVE-2009-0029] System call wrappers part 25
+1,kmsan,e48fbb699f82ef1e80bd7126046394d2dc9ca7e6,[CVE-2009-0029] System call wrappers part 24
+1,kmsan,5a8a82b1d306a325d899b67715618413657efda4,[CVE-2009-0029] System call wrappers part 23
+1,kmsan,3e0fa65f8ba4fd24b3dcfaf14d5b15eaab0fdc61,[CVE-2009-0029] System call wrappers part 22
+1,kmsan,20f37034fb966a1c35894f9fe529fda0b6440101,[CVE-2009-0029] System call wrappers part 21
+1,kmsan,3cdad42884bbd95d5aa01297e8236ea1bad70053,[CVE-2009-0029] System call wrappers part 20
+1,kmsan,003d7ab479168132a2b2c6700fe682b08f08ab0c,[CVE-2009-0029] System call wrappers part 19
+1,kmsan,a6b42e83f249aad723589b2bdf6d1dfb2b0997c8,[CVE-2009-0029] System call wrappers part 18
+1,kmsan,ca013e945b1ba5828b151ee646946f1297b67a4c,[CVE-2009-0029] System call wrappers part 17
+1,kmsan,002c8976ee537724b20a5e179d9b349309438836,[CVE-2009-0029] System call wrappers part 16
+1,kmsan,a26eab2400f0477bfac0255600552394855016f7,[CVE-2009-0029] System call wrappers part 15
+1,kmsan,3480b25743cb7404928d57efeaa3d085708b04c2,[CVE-2009-0029] System call wrappers part 14
+1,kmsan,6a6160a7b5c27b3c38651baef92a14fa7072b3c1,[CVE-2009-0029] System call wrappers part 13
+1,kmsan,64fd1de3d821659ac0a3004fd5ee1de59e64af30,[CVE-2009-0029] System call wrappers part 12
+1,kmsan,257ac264d69017270fbc3cf5536953525db4076c,[CVE-2009-0029] System call wrappers part 11
+1,kmsan,bdc480e3bef6eb0e7071770834cbdda7e30a5436,[CVE-2009-0029] System call wrappers part 10
+1,kmsan,a5f8fa9e9ba5ef3305e147f41ad6e1e84ac1f0bd,[CVE-2009-0029] System call wrappers part 09
+1,kmsan,17da2bd90abf428523de0fb98f7075e00e3ed42e,[CVE-2009-0029] System call wrappers part 08
+1,kmsan,754fe8d297bfae7b77f7ce866e2fb0c5fb186506,[CVE-2009-0029] System call wrappers part 07
+1,kmsan,5add95d4f7cf08f6f62510f19576992912387501,[CVE-2009-0029] System call wrappers part 06
+1,kmsan,362e9c07c7220c0a78c88826fc0d2bf7e4a4bb68,[CVE-2009-0029] System call wrappers part 05
+1,kmsan,b290ebe2c46d01b742b948ce03f09e8a3efb9a92,[CVE-2009-0029] System call wrappers part 04
+1,kmsan,ae1251ab785f6da87219df8352ffdac68bba23e4,[CVE-2009-0029] System call wrappers part 03
+1,kmsan,dbf040d9d1cbf1ef6250bdb095c5c118950bcde8,[CVE-2009-0029] System call wrappers part 02
+1,kmsan,58fd3aa288939d3097fa04505b25c2f5e6e144d1,[CVE-2009-0029] System call wrappers part 01
+1,kmsan,6673e0c3fbeaed2cd08e2fd4a4aa97382d6fedb0,[CVE-2009-0029] System call wrapper special cases
+1,kmsan,ed6bb6194350dc6ae97a65dbf2d621a3dbe6bbe9,[CVE-2009-0029] s390: enable system call wrappers
+1,kmsan,ee6a093222549ac0c72cfd296c69fa5e7d6daa34,[CVE-2009-0029] powerpc: Enable syscall wrappers for 64-bit
+1,kmsan,1a94bc34768e463a93cb3751819709ab0ea80a01,[CVE-2009-0029] System call wrapper infrastructure
+1,kmsan,f627a741d24f12955fa2d9f8831c3b12860635bd,[CVE-2009-0029] Make sys_syslog a conditional system call
+1,kmsan,c9da9f2129d6a421c32e334a83770a9e67f7feac,[CVE-2009-0029] Make sys_pselect7 static
+1,kmsan,1134723e96f6e2abcf8bfd7a2d1c96fcc323ef35,[CVE-2009-0029] Remove __attribute__((weak)) from sys_pipe/sys_pipe2
+1,kmsan,e55380edf68796d75bf41391a781c68ee678587d,[CVE-2009-0029] Rename old_readdir to sys_old_readdir
+1,kmsan,2ed7c03ec17779afb4fcfa3b8c61df61bd4879ba,[CVE-2009-0029] Convert all system calls to return a long
+1,kmsan,4c696ba7982501d43dea11dbbaabd2aa8a19cc42,[CVE-2009-0029] Move compat system call declarations to compat header file
+1,kmsan,17b24b3c97498935a2ef9777370b1151dfed3f6f,ATM: CVE-2008-5079: duplicate listen() on socket corrupts the vcc table
+1,kmsan,01a1a3cc1e3fbe718bd06a2a5d4d1a2d0fb4d7d9,V4L/DVB (9624): CVE-2008-5033: fix OOPS on tvaudio when controlling bass/treble
+1,kmsan,4b40893918203ee1a1f6a114316c2a19c072e9bd,drm/i915: fix ioremap of a user address for non-root (CVE-2008-3831)
+1,kmsan,3d6e48f43340343d97839eadb1ab7b6a3ea98797,[S390] CVE-2008-1514: prevent ptrace padding area read/write in 31-bit mode
+1,kmsan,5a021e9ffd56c22700133ebc37d607f95be8f7bd,random: fix bound check ordering (CVE-2007-3105)
+1,kmsan,99d24edeb6abc6ca3a0d0fbdb83c664c04403c8c,"[NETFILTER]: {ip, nf}_conntrack_sctp: fix remotely triggerable NULL ptr dereference (CVE-2007-2876)"
+1,kmsan,059819a41d4331316dd8ddcf977a24ab338f4300,[PATCH] Fix buffer overflow in Omnikey CardMan 4040 driver (CVE-2007-0005)
+1,kmsan,00a2b0f6dd2372842df73de72d51621b539fea44,Fix possible UDF deadlock and memory corruption (CVE-2006-4145)
+1,kmsan,c164a9ba0a8870c5c9d353f63085319931d69f23,Fix sctp privilege elevation (CVE-2006-3745)
+1,kmsan,abf75a5033d4da7b8a7e92321d74021d1fcfb502,[PATCH] Fix prctl privilege escalation and suid_dumpable (CVE-2006-2451)
+1,kmsan,6c813c3fe9e30fcf3c4d94d2ba24108babd745b0,[NETFILTER]: Fix small information leak in SO_ORIGINAL_DST (CVE-2006-1343)
+1,kmsan,2c8ac66bb2ff89e759f0d632a27cc64205e9ddd9,"[NETFILTER]: Fix do_add_counters race, possible oops or info leak (CVE-2006-0039)"
+1,kmsan,3b7c8108273bed41a2fc04533cc9f2026ff38c8e,[PATCH] smbfs chroot issue (CVE-2006-1864)
+1,kmsan,b78b6af66a5fbaf17d7e6bfc32384df5e34408c8,[PATCH] shmat: stop mprotect from giving write permission to a readonly attachment (CVE-2006-1524)
+1,kmsan,330d57fb98a916fa8e1363846540dd420e99499a,[PATCH] Fix sysctl unregistration oops (CVE-2005-2709)
+1,libxml2,8fb4a770075628d6441fb17a1e435100e2f3b1a2,CVE-2015-8242 Buffer overead with HTML parser in push mode
+1,libxml2,f1063fdbe7fa66332bbb76874101c2a7b51b519f,CVE-2015-7500 Fix memory access error due to incorrect entities boundaries
+1,libxml2,69030714cde66d525a8884bda01b9e8f0abf8e1e,CVE-2015-5312 Another entity expansion issue
+1,libxml2,6360a31a84efe69d155ed96306b9a931a40beab9,CVE-2015-7497 Avoid an heap buffer overflow in xmlDictComputeFastQKey
+1,libxml2,f0709e3ca8f8947f2d91ed34e92e38a4c23eae63,CVE-2015-8035 Fix XZ compression support loop
+1,libxml2,213f1fe0d76d30eaed6e5853057defc43e6df2c9,CVE-2015-1819 Enforce the reader to run in constant memory
+1,libxml2,72a46a519ce7326d9a00f0b6a7f2a8e958cd1675,Fix missing entities after CVE-2014-3660 fix
+1,libxml2,be2a7edaf289c5da74a4f9ed3a0b6c733e775230,Fix for CVE-2014-3660
+1,libxml2,dd8367da17c2948981a51e52c8a6beb445edf825,Fix regressions introduced by CVE-2014-0191 patch
+1,libxml2,1dc9feb00fd3bce5967304dcb388ea3ba7e964e6,"fix for CVE-2008-4226, a memory overflow when building gigantic text"
+1,libxml2,4bf899bf1b719d692be407b89f6610103f13bd5d,fix for CVE-2008-3281 Daniel
+1,postgres,71627f3d1964ef9831ea7997d2f4ac5617c718cc,Fix CVE-2013-0255 properly.
+1,postgres,ca59dfa6f727fe3bf3a01904ec30e87f7fa5a67e,Apply upstream fix for blowfish signed-character bug (CVE-2011-2483).
+1,postgres,413d34be4e1f47ce52b02a6c60858ef6f1285578,"Add configuration parameter ssl_renegotiation_limit to control how often we do SSL session key renegotiation. Can be set to 0 to disable renegotiation completely, which is required if a broken SSL library is used (broken patches to CVE-2009-3555 a known cause) or when using a client library that can't do renegotiation."
+1,postgres,515112f9d4874aaedd0c093f41c0ba3e0bf7f660,"Modify libpq's string-escaping routines to be aware of encoding considerations and standard_conforming_strings.  The encoding changes are needed for proper escaping in multibyte encodings, as per the SQL-injection vulnerabilities noted in CVE-2006-2313 and CVE-2006-2314.  Concurrent fixes are being applied to the server to ensure that it rejects queries that may have been corrupted by attempted SQL injection, but this merely guarantees that unpatched clients will fail rather than allow injection.  An actual fix requires changing the client-side code.  While at it we have also fixed these routines to understand about standard_conforming_strings, so that the upcoming changeover to SQL-spec string syntax can be somewhat transparent to client code."
+1,postgres,b3eb4ea5d8c35ba9ec890b0f51d04c0b62d53a03,"Add a new GUC parameter backslash_quote, which determines whether the SQL parser will allow \'"" to be used to represent a literal quote mark.  The ""\'"" representation has been deprecated for some time in favor of the SQL-standard representation ""''"" (two single quote marks)"
+1,postgres,c61a2f58418e9fa1d5d36a22351b7350b8ad1400,"Change the backend to reject strings containing invalidly-encoded multibyte characters in all cases.  Formerly we mostly just threw warnings for invalid input, and failed to detect it at all if no encoding conversion was required. The tighter check is needed to defend against SQL-injection attacks as per CVE-2006-2313 (further details will be published after release).  Embedded zero (null) bytes will be rejected as well.  The checks are applied during input to the backend (receipt from client or COPY IN), so it no longer seems necessary to check in textin() and related routines; any string arriving at those functions will already have been validated.  Conversion failure reporting (for characters with no equivalent in the destination encoding) has been cleaned up and made consistent while at it."
+1,postgres,226a980bb0dfaaa4cee3650889218483aa9ec632,"Fix bug that allowed any logged-in user to SET ROLE to any other database user id (CVE-2006-0553).  Also fix related bug in SET SESSION AUTHORIZATION that allows unprivileged users to crash the server, if it has been compiled with Asserts enabled.  The escalation-of-privilege risk exists only in 8.1.0-8.1.2. However, the Assert-crash risk exists in all releases back to 7.3. Thanks to Akio Ishida for reporting this problem.santuario-cpp"
